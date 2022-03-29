@@ -1,2 +1,2 @@
-# Candy-Shop
-repository for educational purposes only
+SerpisWareWeb
+Pagina web del perchas
