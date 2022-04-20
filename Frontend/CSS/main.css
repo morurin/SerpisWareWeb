@@ -20,8 +20,8 @@ input::-webkit-inner-spin-button {
 
 /* Firefox */
 input[type=number] {
-    -moz-appearance: textfield;
-    border-radius: 25px;
+    
+    border-radius: 15px;
     background-color: #fff;
     border: none;
 }
@@ -35,7 +35,7 @@ body {
 }
 
 span {
-    font-size: 15px;
+    font-size: 14px;
 
 }
 

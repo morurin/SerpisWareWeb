@@ -1,10 +1,14 @@
 
+.main-container{
+   margin-top: 100px; 
+}
 
 .nombreProducto {
     font-size: 2rem;
 }
 
 .price {
+    
     font-size: 2.4rem;
     padding: 1rem;
 }
@@ -32,24 +36,26 @@
 }
 
 .checkoutInputActions button {
+    margin-top: 18px;
     width: 12rem;
     padding: 6% 30.5%;
-    border-radius: 25px;
+    border-radius: 10px;
     font-family: Autour One;
     font-size: 10px;
     border: none;
     color: #fff;
     cursor: pointer;
-    background-color: #d48ed0e3;
+    background-color: #5a585a;
 
 }
 
+
 .checkoutInputActions button:hover {
-    background-color: #ad7cc9b0;
+    background-color: #797579;;
 }
 
 .checkoutInputActions button:active {
-    background-color: #55449e;
+    background-color: #685f8a;
     transform: translateY(0.5px);
 }
 
@@ -57,22 +63,21 @@
     width: 10rem;
 }
 
-.productDescription {
-    padding: 1rem;
+
+.ImgCheckout {
+    display: inline;
+    width: 20rem;
 }
 
-th,
-td {
-    border-bottom: 1px solid #ddd;
-}
+
 
 .TituloCheckout {
     display: block;
 }
 
 .TituloCheckout h1 {
-    font-size: 4rem;
-    padding-left: 10%;
+    font-size: 32px;
+    padding-left: 8%;
 }
 
 .CheckoutIzq {
@@ -80,6 +85,8 @@ td {
 }
 
 .DescripcionCheckout {
+    background-color: #fff;
+    border-radius: 15px;
     font-family: Roboto, Sans-serif;
     font-size: 3rem;
     padding-left: 2rem;
@@ -87,14 +94,15 @@ td {
 }
 
 .ContainerCheckout {
-    margin-left: 15%;
-    border-radius: 25px;
+    margin-left: 5%;
+    border-radius: 15px;
 
 }
 
 .ContainerCheckout button {
+    margin-top: 28px;
     font-family: 'Roboto';
-    border-radius: 25px;
+    border-radius: 15px;
     width: 100%;
     height: 5.6rem;
     font-size: 2rem;
@@ -102,33 +110,35 @@ td {
     color: #fff;
     border: none;
     cursor: pointer;
-    background-color: #d48ed0e3;
-    ;
+    background-color: #5a585a;
+    
 }
 
 .ContainerCheckout button:hover {
-    background-color: #ad7cc9b0;
+    background-color: #797579;
 }
 
 .ContainerCheckout button:active {
-    background-color: #55449e;
+    background-color: #685f8a;
     transform: translateY(0.5px);
 }
 
 .ContainerCheckout h1 {
-    font-family: 'Roboto';
-    font-size: 2.3rem;
+    margin-top: 55px;
+    font-size: 19px;
     text-align: center;
     padding: 1rem;
-    border-radius: 25px;
-    background-color: rgb(193, 148, 221);
+    border-radius: 12px;
+    background-color: rgb(163, 163, 163);
 }
 
 
 
 /* Media Queries */
-@media (max-width: 700px) {
+@media (max-width: 1075px) {
 
+
+    
     .ImgCheckout {
         width: 10rem;
     }
