@@ -1,0 +1,315 @@
+
+
+* {
+    
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+p {
+    margin: 0;
+}
+
+/* Para quitar el las flechas del input */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+    border-radius: 25px;
+    background-color: #fff;
+    border: none;
+}
+
+
+body {
+    font-family: Autour One;
+    background-color: rgb(243, 239, 239);
+    color: #2c2c2c;
+    margin: 0;
+}
+
+span {
+    font-size: 15px;
+
+}
+
+/* Tema de la barra scroll */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px rgb(231, 229, 229);
+
+}
+
+::-webkit-scrollbar-thumb {
+    background: #5a585a;
+
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #727072;
+}
+
+
+
+/* Topnav de todas las paginas */
+
+.topnav {
+    position: fixed;
+    top: 0px;
+    height: 64px;
+    width: 100%;
+    background-color: #525052;
+    overflow: hidden;
+    transition: top 0.3s;
+    z-index: 1000;
+
+}
+
+#car {
+    font-family: Autour One;
+
+}
+
+.topnav h4 {
+    margin-left: 5px;
+    margin-right: 5px;
+    
+
+}
+
+.topnav a {
+    display: flex;
+    height: 50px;
+    float: right;
+    color: #fff;
+    text-align: center;
+    padding: 14px 10px;
+    text-decoration: none;
+    
+}
+
+.uwo {
+    float: right;
+    margin-top: 8px;
+
+
+}
+
+.bi-person-circle {
+    padding-bottom: 10px;
+
+}
+
+
+.topnav a:hover {
+    background-color: #6b686b;
+    border-radius: 25px;
+
+}
+
+.brand {
+    
+    text-align: auto;
+    margin-top:  7px;
+    margin-left: 25px;
+    float: left;
+}
+
+.brand a:hover{
+    background-color: #525052;
+}
+
+.brand img {
+
+   position: relative;
+   top: -12px;
+}
+
+.brand a {
+
+    display: inline-flex;
+}
+
+
+.brand h4 {
+    padding: 2px 0 9px 8px;
+    margin: 0;
+    font-family: Roboto,  sans-serif;
+    font-size: 20px;
+    
+}
+
+@media only screen and (max-width: 540px) {
+
+
+   .brand h4 {
+       display: none;
+   }
+   
+    
+
+}
+
+
+@media (max-width: 448px) {
+
+    
+    .topnav h4 {
+        display: none;
+    }
+
+    .bi-person-circle {
+        width: 36px;
+        height: 38px;
+    }
+    
+
+    .bi-cart4 {
+        margin-top: -5px;
+        width: 57px;
+        height: 35px;
+
+    }
+
+    .topnav span {
+        font-size: 22px;
+        margin-right: 10px;
+    }
+    
+
+}
+
+.bar {
+
+    margin-top: 13px;
+    margin-right: 10px;
+    cursor: pointer;
+    float: right;
+}
+
+.bi-list {
+    color: #fff;
+    font-size: 35px;
+}
+
+
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: #5a585a;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    align-content: right;
+    z-index: 1001;
+}
+
+.sidenav a {
+    padding: 8px 68px 8px 28px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #fff;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #c5c1c1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: -48px;
+    font-size: 35px;
+    margin-left: 50px;
+}
+
+.login-image {
+    text-align: center;
+    padding-top: 80px;
+    font-family: Autour One;
+}
+
+.login-image img {
+    width: 10%;
+}
+
+.tic {
+    font-size: 2.2rem;
+    margin: 1rem;
+    font-weight: 1000;
+}
+
+.wrapper {
+    min-height: 100%;
+}
+
+
+
+/* Footer de todas las paginas */
+
+footer {
+   
+    margin-top: 5rem;
+    font-family: Roboto, sans-serif;
+    font-size: 3rem;
+    width: 100%;
+    background-color: #524d57;
+    color: #fff;
+    text-align: center;
+    position:relative;
+}
+
+
+.text-foo,
+.redes {
+    font-size: 16px;
+    font-family: Roboto, sans-serif;
+
+    padding-top: 1rem;
+}
+
+footer h4 {
+    font-size: 1.8rem;
+    margin: 0;
+    margin-bottom: 1rem;
+}
+
+
+
+footer p {
+    font-family: Console;
+    font-size: 1.5rem;
+}
+
+.bi:hover {
+    color: #94879c;
+}
+
+.bi-facebook {
+    color: #6384cc;
+}
+
+.bi-instagram {
+    color: rgb(235, 130, 130);
+}
+
+.bi-twitter {
+    color: rgb(119, 196, 219)
+}

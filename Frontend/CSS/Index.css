@@ -1,0 +1,264 @@
+
+/* Menú para seleccionar categorías */
+
+.navbar-mainbg{
+    margin-left: 5.4%;
+    border-radius: 15px;
+    width: 90%;
+    background-color:#5a585a;
+    padding:0;
+}
+#navbarSupportedContent{
+    justify-content:center;
+    overflow:hidden;
+    position:relative
+}
+#navbarSupportedContent ul{
+    
+    padding:0;
+    margin:0
+}
+#navbarSupportedContent ul li a i{
+    
+    margin-right:10px
+}
+#navbarSupportedContent li{
+    
+    list-style-type:none;
+    float:left;
+    
+}
+#navbarSupportedContent ul li a{
+    
+    color:rgb(255, 255, 255);
+    text-decoration:none;
+    font-size:15px;
+    display:block;
+    padding:20px;
+    transition-duration:.6s;
+    transition-timing-function:cubic-bezier(0.68,-.55,.265,1.55);
+    position:relative;
+    
+}
+#navbarSupportedContent>ul>li.active>a{
+    color:#3d3b3b;
+    background-color:transparent;
+    transition:all .7s
+}
+#navbarSupportedContent a:not(:only-child):after{
+    content:"\f105";position:absolute;
+    right:20px;
+    top:10px;
+    font-size:14px;
+    display:inline-block;
+    padding-right:3px;
+    vertical-align:middle;
+    font-weight:900;
+    transition:.5s;
+    
+}
+#navbarSupportedContent .active>a:not(:only-child):after{
+    transform:rotate(90deg)
+}
+.hori-selector{
+    display:inline-block;
+    position:absolute;
+    height:100%;
+    top:0;
+    left:0;
+    transition-duration:.6s;
+    transition-timing-function:cubic-bezier(0.68,-.55,.265,1.55);
+    background-color: rgb(243, 239, 239);
+    border-top-left-radius:15px;
+    border-top-right-radius:15px;
+    margin-top:10px
+}
+.hori-selector .left,.hori-selector .right{
+    position:absolute;
+    width:25px;
+    height:25px;
+    background-color: rgb(243, 239, 239);
+    bottom:10px
+}
+.hori-selector .right{
+    right:-25px
+}
+.hori-selector .left{
+    left:-25px
+}
+.hori-selector .left:before,.hori-selector .right:before{
+    content:'';
+    position:absolute;
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    background-color:#5a585a;
+}
+.hori-selector .right:before{
+    bottom:0;right:-25px
+}
+.hori-selector .left:before{
+    bottom:0;
+    left:-25px
+}
+
+
+
+@media (max-width:1140px){
+
+    .index-container {
+
+       display: grid;
+       grid-template-columns: 28% 72%;
+    }
+
+   
+
+
+    .navbar-mainbg{
+        margin-top: 20%;
+        margin-left: 22.4%;
+        border-radius: 25px;
+        width: 155px;
+        height: 600px;
+        
+    }
+
+    .hori-selector{
+        margin-top:0;
+        margin-left:8px;
+        border-radius:25px 0 0 25px
+    }
+    .hori-selector .left,.hori-selector .right{
+        right:8px
+    }
+    .hori-selector .left{
+        top:-25px;
+        left:auto
+    }
+    .hori-selector .right{
+        bottom:-25px
+    }
+    .hori-selector .left:before{
+        left:-25px;
+        top:-25px
+    }
+    .hori-selector .right:before{
+        bottom:-25px;
+        left:-25px
+    }
+
+}
+
+
+@media (max-width:431px){
+
+    
+
+    .navbar-mainbg{
+        margin-left: 5.8%;
+       
+       
+    }
+}
+
+
+
+/*Contenedor de los productos */
+
+.stuff-container{
+    margin: 5%;
+    margin-left: 10%;
+    margin-right: 8%;
+   
+}
+
+.stuff-container a {
+    text-decoration: none;
+    
+}
+
+.stuff-container div  {
+    
+    height: 23rem;
+    width: 31%;
+    margin-bottom: 82px;
+    margin-inline: 1%;
+    display:inline-flex;
+    justify-content: center;
+    background-color: #fff;
+    border-radius: 25px;
+    transition:  0.3s ease-out;
+    
+    
+}
+
+.stuff-container h2 {
+    margin-top: -44px;
+    border-radius: 10px;
+    background-color: #fff;
+    padding: 10px;
+    position: absolute;
+    font-size: 16px;
+    color: #3b3a3b;
+}
+
+.stuff-container img {
+    padding: 18px;
+    width: auto;
+    height:96%;
+    overflow: hidden;
+}
+
+
+
+ .stuff-container div:hover > h2{
+
+    background-color: #cbbdeb;
+   
+}
+
+.stuff-container div:hover{
+
+    background-color: #edebf1;
+    
+}
+
+
+@media (max-width: 1139px) {
+   
+
+    .stuff-container div {
+        margin-bottom: 15px;
+        margin-top: 80px;
+        margin-left: 2%;
+        height: 164px;
+        width: 45%;
+    }
+}
+
+
+
+@media (max-width: 715px) {
+
+    .stuff-container div {
+        
+        margin-left: 10%;
+        height: 170px;
+        width: 63%;
+    }
+
+}
+
+
+@media (max-width: 445px) {
+
+    .stuff-container div {
+       
+        margin-left: 10%;
+        height: 135px;
+        width: 86%;
+    }
+
+}
+

@@ -1,7 +1,9 @@
-const modal = document.getElementById("popup-box");
+
+
+var modal = document.getElementById("popup-box");
 const checkoutDiv = document.querySelector("nav");
 
-const addButton = checkoutDiv.querySelector(".add");
+var addButton = checkoutDiv.querySelector(".add");
 
 function shopping_car() {
   let carrito = JSON.parse(sessionStorage.getItem("Carrito"));
@@ -16,6 +18,16 @@ function shopping_car() {
   }
 }
 
+document.addEventListener("click",
+function(event){
+  
+  if(event.target == modal){
+    closeModal();
+  }
+},
+false
+)
+
 function showModal() {
   modal.style.display = "block";
 }
@@ -26,12 +38,8 @@ function span() {
 }
 
 // When the user clicks anywhere outside of the modal, close it
-window.onclick = function () {
-  closeModal();
-};
+
 
 function closeModal(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
+  document.querySelector(".modal").style.display = "none"
 }

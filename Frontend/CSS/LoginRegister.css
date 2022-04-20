@@ -1,0 +1,285 @@
+
+
+.login-container{
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+}
+
+.formularioLogin {
+    width: 510px;
+    text-align: center;
+
+}
+
+.formularioRegistro {
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin: 10px;
+}
+
+.registrarButton {
+    cursor: pointer;
+    font-size: 1.8rem;
+    font-family: Roboto;
+
+}
+.registrarUsuario {
+    padding-top: 10px;
+    font-size: 1.8rem;
+    font-family: Roboto;
+
+}
+
+
+
+
+
+.formularioRegistro h3 {
+    font-size: 3rem;
+    margin: 1rem;
+}
+
+.formularioLogin h3 {
+    font-size: 3rem;
+    margin: 1rem;
+}
+.row li {
+    cursor: pointer;
+}
+
+.row li:hover {
+    
+    background-color: #f500edda;;
+}
+
+.formularioRegistro button {
+    /*padding: 15px 35.5%;*/
+    justify-content: center;
+    align-items: center;
+    width: 95%;
+    height: 48px;
+    margin-top: 28px;
+    align-items: center;
+    border-radius: 15px;
+    font-family: Autour One;
+    font-size: 14px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    background-color: #5a585a;
+
+}
+
+.formularioLogin button {
+
+    margin-top: 25px;
+    justify-content: center;
+    align-items: center;
+    width: 82%;
+    height: 48px;
+    border-radius: 15px;
+    font-family: Autour One;
+    font-size: 15px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    background-color: #5a585a;
+
+}
+
+.formularioLogin button:hover {
+    background-color: #797579;
+}
+
+.formularioLogin button:active {
+    background-color: #685f8a;
+    transform: translateY(0.5px);
+}
+
+
+.formularioRegistro button:hover {
+    background-color: #797579;
+}
+
+.formularioRegistro button:active {
+    background-color: #685f8a;
+    transform: translateY(0.5px);
+}
+
+
+
+.formularioLogin input,
+.formularioLogin datalist,
+.formularioLogin label {
+    display: flex;
+}
+
+.formularioContainerGrande {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-between;
+
+}
+
+
+.formularioLogin div {
+    display: flex;
+    justify-content: center;
+   
+}
+
+.formularioRegistro .divPrimarios {
+    width: unset;
+    margin-bottom: 10px;
+
+}
+
+.formularioLogin .divPrimarios {
+    width: unset;
+    margin-bottom: 10px;
+
+}
+
+
+
+
+
+.formularioRegistro input{
+    font: inherit;
+    font-family: Roboto, sans-serif;
+    padding: 10px 10%;
+    width: 95%;
+    height: 48px;
+    text-align: left;
+    font-size: 18px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+
+
+.registroInput{
+    align-items: center;
+    padding: 7px;
+    
+}
+.formularioLogin input,
+.formularioLogin select {
+    font: inherit;
+    font-family: Roboto, sans-serif;
+    padding: 1.2rem;
+    width: 80%;
+    height: 48px;
+    font-size: 18px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    
+    max-width: 100%;
+}
+
+.formularioRegistro input:focus {
+    outline: none;
+    border-color: #5f5e5f;
+    background-color: #d8d8d8;
+}
+
+
+
+
+
+/* Modal de registro */
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1001;
+    /* Sit on top */
+    padding-top: 100px;
+    /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+    -webkit-animation-name: fadeIn;
+    -webkit-animation-duration: 0.4s;
+    animation-name: fadeIn;
+    animation-duration: 0.4s;
+}
+
+.modal-content-register{
+    border-radius: 15px;
+    margin: 4%;
+    display: grid;
+    align-items: center;
+    background-color: rgb(243, 239, 239);
+    margin: auto;
+    padding: 5px;
+    border: 1px solid #888;
+    width: 350px;
+    height: 82%;
+    -webkit-animation-name: slideIn;
+    -webkit-animation-duration: 0.4s;
+    animation-name: slideIn;
+    animation-duration: 0.4s;
+}
+
+
+
+
+
+/* Add Animation */
+@-webkit-keyframes slideIn {
+    from {
+        bottom: -300px;
+        opacity: 0
+    }
+
+    to {
+        bottom: 0;
+        opacity: 1
+    }
+}
+
+@keyframes slideIn {
+    from {
+        bottom: -300px;
+        opacity: 0
+    }
+
+    to {
+        bottom: 0;
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
