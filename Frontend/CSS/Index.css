@@ -167,6 +167,7 @@
 /*Contenedor de los productos */
 
 .stuff-container{
+    
     margin: 5%;
     margin-left: 10%;
     margin-right: 8%;
@@ -178,8 +179,9 @@
     
 }
 
-.stuff-container div  {
+.stuff-container .content  {
     
+    position: relative;
     height: 23rem;
     width: 31%;
     margin-bottom: 82px;
@@ -204,6 +206,7 @@
 }
 
 .stuff-container img {
+    
     padding: 18px;
     width: auto;
     height:96%;
@@ -218,17 +221,66 @@
    
 }
 
-.stuff-container div:hover{
 
-    background-color: #edebf1;
+
+
+
+
+.content .overlay {
+    border-radius: 25px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: 0.5s ease-in-out;
+    background: #726a8bb9;
     
+  }
+
+  .content:hover .overlay {
+   
+    opacity: 1;
+    
+  }
+
+.text  {
+  color: #fff;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transition: all 0.3s ease-in-out;
+  
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
 }
+
+.text h3 {
+    font-size: 26px;
+}
+
+
+.content:hover .text {
+    
+    opacity: 1;
+    
+  }
+  
+
+
+  
 
 
 @media (max-width: 1139px) {
    
 
-    .stuff-container div {
+    .stuff-container .content {
         margin-bottom: 15px;
         margin-top: 80px;
         margin-left: 2%;
@@ -241,7 +293,7 @@
 
 @media (max-width: 715px) {
 
-    .stuff-container div {
+    .stuff-container .content {
         
         margin-left: 10%;
         height: 170px;
@@ -253,7 +305,7 @@
 
 @media (max-width: 445px) {
 
-    .stuff-container div {
+    .stuff-container .content {
        
         margin-left: 10%;
         height: 135px;

@@ -1,121 +1,163 @@
 
 
-var choco = document.getElementsByClassName("chocolate");
-var bom = document.getElementsByClassName("bombones");
-var malv = document.getElementsByClassName("masmelos");
-var gomi = document.getElementsByClassName("gomas");
-var chi = document.getElementsByClassName("chicles")
+var cpu = document.getElementsByClassName("procesadores");
+var motherboard = document.getElementsByClassName("placasBase");
+var ram = document.getElementsByClassName("ram");
+var graphic = document.getElementsByClassName("graficas");
+var disk = document.getElementsByClassName("discos")
+var other = document.getElementsByClassName("otros")
 var i;
 
 
 
 function general() {
-	for (i = 0; i < choco.length; i++) {
-    	choco[i].style.display = "initial";
+	for (i = 0; i < cpu.length; i++) {
+     cpu[i].style.display = "initial";
   	}
-    for (i = 0; i < bom.length; i++) {
-    	bom[i].style.display = "initial";
+    for (i = 0; i < motherboard.length; i++) {
+    	motherboard[i].style.display = "initial";
   	}
-    for (i = 0; i < malv.length; i++) {
-    	malv[i].style.display = "initial";
+    for (i = 0; i < ram.length; i++) {
+    	ram[i].style.display = "initial";
   	}
-	for (i = 0; i < gomi.length; i++) {
-    	gomi[i].style.display = "initial";
+	for (i = 0; i < graphic.length; i++) {
+    	graphic[i].style.display = "initial";
   	}
-	for (i = 0; i < chi.length; i++) {
-    	chi[i].style.display = "initial";
+	for (i = 0; i < disk.length; i++) {
+    	disk[i].style.display = "initial";
   	}
+	for (i = 0; i < other.length; i++) {
+	other[i].style.display = "initial";
+	}
 }
 
-function chocolate() {
-	for (i = 0; i < choco.length; i++) {
-    	choco[i].style.display = "initial";
+function procesadores() {
+	for (i = 0; i < cpu.length; i++) {
+     cpu[i].style.display = "initial";
   	}
-    for (i = 0; i < bom.length; i++) {
-    	bom[i].style.display = "none";
+    for (i = 0; i < motherboard.length; i++) {
+    	motherboard[i].style.display = "none";
   	}
-    for (i = 0; i < malv.length; i++) {
-    	malv[i].style.display = "none";
+    for (i = 0; i < ram.length; i++) {
+    	ram[i].style.display = "none";
   	}
-	for (i = 0; i < gomi.length; i++) {
-    	gomi[i].style.display = "none";
+	for (i = 0; i < graphic.length; i++) {
+    	graphic[i].style.display = "none";
   	}
-	for (i = 0; i < chi.length; i++) {
-    	chi[i].style.display = "none";
+	for (i = 0; i < disk.length; i++) {
+    	disk[i].style.display = "none";
   	}
+	for (i = 0; i < other.length; i++) {
+	other[i].style.display = "none";
+	}
 }
 
-function bombon() {
-	for (i = 0; i < choco.length; i++) {
-    	choco[i].style.display = "none";
+function placasBase() {
+	for (i = 0; i < cpu.length; i++) {
+     cpu[i].style.display = "none";
   	}
-    for (i = 0; i < bom.length; i++) {
-    	bom[i].style.display = "initial";
+    for (i = 0; i < motherboard.length; i++) {
+    	motherboard[i].style.display = "initial";
   	}
-    for (i = 0; i < malv.length; i++) {
-    	malv[i].style.display = "none";
+    for (i = 0; i < ram.length; i++) {
+    	ram[i].style.display = "none";
   	}
-	for (i = 0; i < gomi.length; i++) {
-    	gomi[i].style.display = "none";
+	for (i = 0; i < graphic.length; i++) {
+    	graphic[i].style.display = "none";
   	}
-	for (i = 0; i < chi.length; i++) {
-    	chi[i].style.display = "none";
+	for (i = 0; i < disk.length; i++) {
+    	disk[i].style.display = "none";
   	}
+	for (i = 0; i < other.length; i++) {
+	other[i].style.display = "none";
+	}
 }
 
-function malvavisco() {
-	for (i = 0; i < choco.length; i++) {
-    	choco[i].style.display = "none";
+function ramu() {
+	for (i = 0; i < cpu.length; i++) {
+     cpu[i].style.display = "none";
   	}
-    for (i = 0; i < bom.length; i++) {
-    	bom[i].style.display = "none";
+    for (i = 0; i < motherboard.length; i++) {
+    	motherboard[i].style.display = "none";
   	}
-    for (i = 0; i < malv.length; i++) {
-    	malv[i].style.display = "initial";
+    for (i = 0; i < ram.length; i++) {
+    	ram[i].style.display = "initial";
   	}
-	for (i = 0; i < gomi.length; i++) {
-    	gomi[i].style.display = "none";
+	for (i = 0; i < graphic.length; i++) {
+    	graphic[i].style.display = "none";
   	}
-	for (i = 0; i < chi.length; i++) {
-    	chi[i].style.display = "none";
+	for (i = 0; i < disk.length; i++) {
+    	disk[i].style.display = "none";
   	}
+	for (i = 0; i < other.length; i++) {
+	other[i].style.display = "none";
+	}
 }
 
-function gomita() {
-	for (i = 0; i < choco.length; i++) {
-    	choco[i].style.display = "none";
+function graficas() {
+	for (i = 0; i < cpu.length; i++) {
+     cpu[i].style.display = "none";
   	}
-    for (i = 0; i < bom.length; i++) {
-    	bom[i].style.display = "none";
+    for (i = 0; i < motherboard.length; i++) {
+    	motherboard[i].style.display = "none";
   	}
-    for (i = 0; i < malv.length; i++) {
-    	malv[i].style.display = "none";
+    for (i = 0; i < ram.length; i++) {
+    	ram[i].style.display = "none";
   	}
-	for (i = 0; i < gomi.length; i++) {
-    	gomi[i].style.display = "initial";
+	for (i = 0; i < graphic.length; i++) {
+    	graphic[i].style.display = "initial";
   	}
-	for (i = 0; i < chi.length; i++) {
-    	chi[i].style.display = "none";
+	for (i = 0; i < disk.length; i++) {
+    	disk[i].style.display = "none";
   	}
+	for (i = 0; i < other.length; i++) {
+	other[i].style.display = "none";
+	}
 }
 
-function chicle() {
-	for (i = 0; i < choco.length; i++) {
-    	choco[i].style.display = "none";
+function discos() {
+	for (i = 0; i < cpu.length; i++) {
+     cpu[i].style.display = "none";
   	}
-    for (i = 0; i < bom.length; i++) {
-    	bom[i].style.display = "none";
+    for (i = 0; i < motherboard.length; i++) {
+    	motherboard[i].style.display = "none";
   	}
-    for (i = 0; i < malv.length; i++) {
-    	malv[i].style.display = "none";
+    for (i = 0; i < ram.length; i++) {
+    	ram[i].style.display = "none";
   	}
-	for (i = 0; i < gomi.length; i++) {
-    	gomi[i].style.display = "none";
+	for (i = 0; i < graphic.length; i++) {
+    	graphic[i].style.display = "none";
   	}
-	for (i = 0; i < chi.length; i++) {
-    	chi[i].style.display = "initial";
+	for (i = 0; i < disk.length; i++) {
+    	disk[i].style.display = "initial";
   	}
+	for (i = 0; i < other.length; i++) {
+		other[i].style.display = "none";
+		}	  
+
 }
+
+function otros() {
+for (i = 0; i < cpu.length; i++) {
+	cpu[i].style.display = "none";
+	}
+for (i = 0; i < motherboard.length; i++) {
+	motherboard[i].style.display = "none";
+	}
+for (i = 0; i < ram.length; i++) {
+	ram[i].style.display = "none";
+	}
+for (i = 0; i < graphic.length; i++) {
+	graphic[i].style.display = "none";
+	}
+for (i = 0; i < disk.length; i++) {
+	disk[i].style.display = "none";
+	}
+for (i = 0; i < other.length; i++) {
+	other[i].style.display = "initial";
+	}
+}
+
 
 
 

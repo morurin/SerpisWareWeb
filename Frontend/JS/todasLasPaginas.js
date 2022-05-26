@@ -1,12 +1,12 @@
 //Ajustar el footer al final de la pagina si el contenido no es suficiente
+var about = document.getElementById("aboutUs");
+var contact = document.getElementById("contact");
+
 let height = document.body.clientHeight;
 const body = document.querySelector("body");
 const bodyHeight = body.offsetHeight;
 const footer = body.querySelector("footer");
-if (height > bodyHeight) {
-    console.log(height, bodyHeight)
-  footer.style.marginTop = `${height - bodyHeight-5}px`;
-}
+
 
 window.onscroll = function () {
   scrollFunction();
@@ -24,14 +24,33 @@ function scrollFunction() {
   }
   prevScrollpos = currentScrollPos;
 }
+
 const closeBtn = document.querySelector(".closebtn");
 closeBtn.addEventListener("click", closeNav);
 const barBtn = document.querySelector(".bar");
 barBtn.addEventListener("click", openSide);
+
 function openSide() {
   document.getElementById("sidenav").style.width = "240px";
 }
 
 function closeNav() {
   document.getElementById("sidenav").style.width = "0";
+  about.style.display = "none";
+  contact.style.display = "none";
+}
+
+
+function showAbout() {
+
+  about.style.display = "block";
+  
+}
+
+
+function showContact() {
+
+  contact.style.display = "block";
+  
+
 }

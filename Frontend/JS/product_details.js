@@ -38,8 +38,6 @@ function span() {
 }
 
 // When the user clicks anywhere outside of the modal, close it
-
-
 function closeModal(event) {
   document.querySelector(".modal").style.display = "none"
 }
