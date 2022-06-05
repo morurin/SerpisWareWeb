@@ -30,7 +30,7 @@
 
 
         <div class="uwo">
-            <a href="./Checkout.html">
+            <a href="./Checkout.php">
                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi-cart4"
                     viewBox="0 0 16 16">
                     <path
@@ -51,7 +51,7 @@
 
 
         <div class="brand">
-            <a href="../Paginas/Index.html">
+            <a href="../Paginas/Index.php">
                 <img src="../../../Imágenes/logoPerso.png" width="44px" height="45px" alt="Home">
                 <h4>SerpisWare</h4>
             </a>
@@ -197,7 +197,7 @@
 
                     <!--Precio del producto-->
                     <h2 id="price">379,67€</h2>
-                    <button class="modal-button" onclick="location.href= './Checkout.html'">Ir al carrito</button>
+                    <button class="modal-button" onclick="location.href= './Checkout.php'">Ir al carrito</button>
                     <p>Compartir:
                         <a href="https://www.facebook.com/" target="_blank">
                             <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"

@@ -31,7 +31,7 @@
 
 
         <div class="uwo">
-            <a href="./Checkout.html">
+            <a href="./Checkout.php">
                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi-cart4"
                     viewBox="0 0 16 16">
                     <path
@@ -39,7 +39,7 @@
                 </svg>
                 <h4>Carrito</h4><span id="car">0</span>
             </a>
-            <a href="./FormularioLoginUsuario.html"><h4>Mi cuenta</h4>
+            <a href="./FormularioLoginUsuario.php"><h4>Mi cuenta</h4>
                 <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi-person-circle"
                     viewBox="0 0 16 16">
                     <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
@@ -50,7 +50,7 @@
         </div>
 
         <div class="brand">
-            <a href="../Paginas/Index.html">
+            <a href="../Paginas/Index.php">
                 <img src="../../../Imágenes/logoPerso.png" width="44px" height="45px" alt="Home">
                 <h4>SerpisWare</h4>
             </a>
