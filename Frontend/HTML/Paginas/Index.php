@@ -127,7 +127,22 @@
             
             <div class="stuff-container">
                 
-                
+                <?php
+                    include 'db_connect.php';
+                    $products = $pdo->prepare('SELECT * FROM "productos" ORDER BY "idproducto" DESC');
+                    $products->execute();
+                    $products = $products->fetchAll();
+                    foreach($products as $product) {
+                            echo '<a class="'.$product['tipoProducto'].'" href="../Paginas/Product_details.php?id='.$product['idProducto'].'">';
+                            echo '<div class="content">';
+                            echo '<div class="overlay"></div>';
+                            echo '<img src="../../../Imágenes/'.$product['imagenProducto'].'">';
+                            echo '';
+                    }
+                ?>    
+
+
+
                 <a class="procesadores" href="../Paginas/Product_details.html">
                     <div class="content">
                         <div class="overlay"></div>
