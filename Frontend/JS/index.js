@@ -8,6 +8,7 @@ var disk = document.getElementsByClassName("discos")
 var other = document.getElementsByClassName("otros")
 var i;
 
+console.log("a");
 
 
 function general() {

@@ -1,5 +1,7 @@
 
 
+console.log("aaaaaaaaaaaaaaaaa");
+
 // Este array existe para iniciliazar el session storage, mas adelante cuando otras paginas agreguen productos se borrara hasta la fila 219
 let arrayDeProductos = [
   {

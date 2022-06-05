@@ -43,7 +43,6 @@ body {
 
 
 
-
 span {
     font-size: 14px;
 
@@ -129,7 +128,7 @@ span {
 
 .brand {
     
-    text-align: auto;
+    /*text-align: auto;*/
     margin-top:  7px;
     margin-left: 25px;
     float: left;
@@ -227,7 +226,7 @@ span {
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
-    align-content: right;
+    align-content: end;
     z-index: 1001;
 }
 
