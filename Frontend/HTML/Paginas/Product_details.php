@@ -45,11 +45,13 @@
         
         <div class="container">
 
+            
             <div class="image-box">
-
+            
                 <img id="dimage" src="../../../Imágenes/<?php echo $p_imagen?>" alt="Choco">
-
+                
             </div>
+            
 
 
             <div class="buy">

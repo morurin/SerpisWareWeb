@@ -80,12 +80,25 @@
 
 }
 
+.image-box{
+    
+    border-radius: 15px;
+    overflow: hidden;
+    margin: 0;
+    
+}
 
 .image-box img {
     padding: 5%;
-    width: 65%;
-    background-color: #fff;
+    width: 70%;
+    background-color: #ffffff6b;
     border-radius: 15px;
+    transition: 0.5s all ease-in-out;
+}
+
+
+.image-box img:hover {
+    transform: scale(1.4);
 }
 
 @media only screen and (min-width: 540px) {
