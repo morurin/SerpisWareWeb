@@ -87,7 +87,7 @@
                     $query = "SELECT * FROM productos ORDER BY idproducto DESC";
                     $result = mysqli_query($pdo,$query);
                     while ($row = mysqli_fetch_array($result)){ ?>
-                       <a class="<?php echo $row["tipoProducto"];?> href ="xd" >
+                       <a class="<?php echo $row['tipoProducto'];?>" href ="../Paginas/Product_details.php?id=<?php echo $row['idproducto']?>">
                        <div class="content">
                            <div class="overlay">                           </div>
                                <img src="../../../Imágenes/<?php echo $row["imagenProducto"];?>">

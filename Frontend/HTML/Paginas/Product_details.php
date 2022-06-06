@@ -16,6 +16,22 @@
 
 </head>
 
+<?php include ("../../../Bases de Datos/db_connect.php");
+        $id = $_GET['id'];
+        $id = mysqli_real_escape_string($pdo,$id);
+        $query = "SELECT * FROM productos WHERE idproducto=" . $id;
+        $result = mysqli_query($pdo,$query);
+
+        while($row = mysqli_fetch_array($result)) {
+
+            $p_nombre = $row['nombreProducto'];
+            $p_precio = $row['precioProducto'];
+            $p_especs= $row['especProducto']; 
+            $p_sobre= $row['sobreProducto']; 
+            $p_imagen= $row['imagenProducto']; 
+        }
+?>
+
 <body>
     
 
@@ -26,11 +42,12 @@
     <main>
 
 
+        
         <div class="container">
 
             <div class="image-box">
 
-                <img id="dimage" src="../../../Imágenes/ryzen-7-5800.png" alt="Choco">
+                <img id="dimage" src="../../../Imágenes/<?php echo $p_imagen?>" alt="Choco">
 
             </div>
 
@@ -38,9 +55,9 @@
             <div class="buy">
 
                 <!--Nombre del producto-->
-                <h3 id="pname">AMD Ryzen 7 5800X 3.8GHz</h3>
+                <h3 id="pname"><?php echo $p_nombre?></h3>
                 <!--Precio del producto-->
-                <h2 id="price"> 379,67€</h2>
+                <h2 id="price"><?php echo $p_precio?>€</h2>
                 <button class="buy-button">Comprar
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bag"
                         viewBox="0 0 16 16">
@@ -89,36 +106,16 @@
                 <br><br><br>
                 <!--Aquí irá una descripción de cada producto -->
                 <p id="descript">
-                    AMD El procesador de 8 núcleos más rápido para equipos de sobremesa convencionales, con 16 subprocesos de procesamiento. Soporte operativo: Windows 10 64-Bit Edition
-                    Puede ofrecer un rendimiento de élite de 100 más FPS en los juegos más populares del mundo
-                    Refrigerador no incluido, enfriador de alto rendimiento recomendado
-                    4.7 GHz Max Boost, desbloqueado para overclocking, 36 MB de caché, soporte DDR-3200
-                    Para la plataforma avanzada Socket AM4, puede soportar PCIe 4.0 en placas base X570 y B550
+                <?php echo $p_sobre?>
                     
                 </p>
             </div>
 
             <div class="specs">
+                <!--Especificaciones del producto -->
                 <h2>Especificaciones</h2>
                 <p>
-                    Núcleos de CPU 8 <br>
-                    Hilos 16 <br>
-                    Reloj base 3.8GHz <br>
-                    Reloj de aumento máx. Hasta 4.7GHz <br>
-                    Caché L2 total 4MB <br>
-                    Caché L3 total 32MB <br>
-                    Desbloqueados Sí <br>
-                    CMOS TSMC 7nm FinFET <br>
-                    Package AM4 <br>
-                    Versión de PCI Express PCIe 4.0 <br>
-                    Solución térmica (PIB) Not included <br>
-                    TDP/TDP predeterminado 105W <br>
-                    Memoria <br>
-                    Velocidad máxima de memoria Up to 3200MHz <br>
-                    Tipo de memoria DDR4 <br>
-                    Funcionalidades principales <br>
-                    Tecnologías compatibles Tecnología AMD StoreMI <br>
-                    Utilidad AMD Ryzen™ Master AMD Ryzen™ VR-Ready Premium <br>
+                <?php echo $p_especs?>
                 </p>
             </div>
         </div>
@@ -137,8 +134,8 @@
                         </svg>
                     </h3>
                     <!--Nombre del producto-->
-                    <p id="pname" class="modal-ProductN">AMD Ryzen 7 5800X 3.8GHz</p>
-                    <img id="dimage" class="image-modal" src="../../../Imágenes/ryzen-7-5800.png" alt="Choco">
+                    <p id="pname" class="modal-ProductN"><?php echo $p_nombre?></p>
+                    <img id="dimage" class="image-modal" src="../../../Imágenes/<?php echo $p_imagen?>" alt="Choco">
 
                 </div>
                 <div class="right-stuff">
@@ -146,7 +143,7 @@
                     <br><br><br>
 
                     <!--Precio del producto-->
-                    <h2 id="price">379,67€</h2>
+                    <h2 id="price"><?php echo $p_precio?>€</h2>
                     <button class="modal-button" onclick="location.href= './Checkout.php'">Ir al carrito</button>
                     <p>Compartir:
                         <a href="https://www.facebook.com/" target="_blank">
