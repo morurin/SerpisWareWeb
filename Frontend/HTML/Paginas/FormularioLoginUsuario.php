@@ -157,7 +157,7 @@
     
 </body>
 <script src="../../JS/todasLasPaginas.js"></script>
-<script src="../../JS/product_details.js"></script>
+
 <script src="../../JS/loginUsuario.js"></script>
 
 </html>

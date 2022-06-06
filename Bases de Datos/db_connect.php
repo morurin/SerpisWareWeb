@@ -9,7 +9,7 @@ try {
         'localhost',
         'root',
         '',
-        'serpisweb_bd'
+        'serpisweb_db'
     );
 
 
