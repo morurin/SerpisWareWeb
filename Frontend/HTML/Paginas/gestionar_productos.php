@@ -93,9 +93,9 @@
 
         <div class="container">
 
-            <button class="btn bg-success text-light btn-block btn-lg p-3" type="button" ><i
-                        class="fa fa-plus fa-2x"></i>
-                Añadir</button>
+            <button type="button" class="btn btn-success btn-lg btn-block"> <i class="fa fa-plus" aria-hidden="true"></i>
+                 Añadir Productos</button>
+
 
             <table class="table table-bordered align-middle my-3 mt-5" id="tabla-productos">
                 <thead>
