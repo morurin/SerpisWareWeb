@@ -3,11 +3,12 @@
 
 * {
     box-sizing: border-box;
-    font-size: 62.5%;
+    /*font-size: 62.5%;*/
 }
 
 p {
     margin: 0;
+    font-size: 15px;
 }
 
 /* Para quitar el las flechas del input */
@@ -87,6 +88,7 @@ span {
 
 
 .topnav h4 {
+    font-size: 18px;
     margin-left: 5px;
     margin-right: 5px;
     
@@ -310,7 +312,7 @@ footer {
 }
 
 footer h4 {
-    font-size: 1.8rem;
+    font-size: 14px;
     margin: 0;
     margin-bottom: 1rem;
 }
@@ -319,7 +321,7 @@ footer h4 {
 
 footer p {
     font-family: Console;
-    font-size: 1.5rem;
+    font-size: 12px;
 }
 
 .bi:hover {

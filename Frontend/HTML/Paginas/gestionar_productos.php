@@ -1,65 +1,10 @@
 <?php require '../../../Bases de Datos/db_connect.php';?>
 <?php include 'header.php'; ?>
-<style>
-    td{
-        font-size: 1.8rem;
-        text-align: center;
-    }
-    b{
-        font-size: 1.8rem;
-    }
 
-    .productito{
-        width: 100% !important;
-        height: 100% !important;
-    }
+<head>
+<link rel="stylesheet" href="../../CSS/gestionar_productos.css" />
 
-    table {
-        width: 100%;
-        border: 2px solid #525c65 !important;
-        border-collapse: collapse;
-    }
-    tr,td,thead,tbody{
-        border: 2px solid #525c65 !important;
-    }
-
-
-    .alert-danger {
-        padding: 20px;
-        background-color: #f44336;
-        color: white;
-    }
-
-    .alert-success {
-        padding: 20px;
-        background-color: #4CAF50;
-        color: white;
-    }
-
-    .alert-warning {
-        padding: 20px;
-        background-color: #ff9800;
-        color: white;
-    }
-
-    .closebtn {
-        margin-left: 15px;
-        color: white;
-        font-weight: bold;
-        float: right;
-        font-size: 22px;
-        line-height: 20px;
-        cursor: pointer;
-        transition: 0.3s;
-    }
-
-    .closebtn:hover {
-        color: black;
-    }
-    div span{
-        font-size: 1.8rem;
-    }
-</style>
+</head>
 <main>
 
 
@@ -81,6 +26,7 @@
         <!--Fin Aviso de Edicion-->
 
         <!--texto administracion de tienda centrado-->
+        <br><br><br><br><br><br><br><br><br>
         <div class="text-center mt-3">
             <h1>Administración de la tienda</h1>
             <p>Aquí podrás administrar los productos y las categorías de la tienda.</p>
@@ -122,7 +68,7 @@
                     <td><?php echo $row['precioProducto']; ?> <b>€</b> </td>
                     <td><?php echo $row['tipoProducto']; ?></td>
                     <td class="text-center p-5">
-                        <a href="./models/products/update.php?id=<?php echo $row['idproducto']; ?>" class="btn btn-secondary p-3">
+                        <a href="./update.php?id=<?php echo $row['idproducto']; ?>" class="btn btn-secondary p-3">
                             <i class="fa fa-edit fa-2x"></i>
                         </a>
 
@@ -135,6 +81,7 @@
                 <?php } ?>
                 </tbody>
             </table>
+            
 
         </div>
     </div>

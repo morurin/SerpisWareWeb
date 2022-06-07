@@ -20,17 +20,17 @@
     <div class="container">
         <div class="left">
             <div class="adress">
-                <h3>Dirección de entrega</h3>
+                <h5>Dirección de entrega</h5>
                 <div class="change">
-                    <h4 onclick="showModalA()">Cambiar</h4>
+                    <h5 onclick="showModalA()">Cambiar</h5>
                 </div>
             </div>
             
 
             <div class="payment">
-                <h3>Métodos de pago</h3>
+                <h5>Métodos de pago</h5>
                 <div class="change">
-                    <h4 onclick="showModalP()">Cambiar</h4>
+                    <h5 onclick="showModalP()">Cambiar</h5>
                 </div>
             </div>
 
@@ -40,8 +40,8 @@
                 </div>
 
                 <div class="text">
-                    <h4>Asus Z690</h4>
-                    <br><br><br>
+                    <h5>Asus Z690</h5>
+                
                     <h5>100.50€</h5>
                 </div>
             </div>
@@ -54,11 +54,11 @@
         <div class="rigth">
             <div class="resume">
                 <h2>Resumen</h2>
-                <br><br><br><br>
+                <br>
                 <h5>Costo total de los productos <span>22</span>€</h5>
-                <br><br><br><br>
+                <br>
                 <h5>Total de envío  <span>5</span>€</h5>
-                <br><br><br><br><br><br>
+                <br>
                 <h5>Total <span>27</span>€</h5>
 
                 <div>
@@ -247,7 +247,7 @@
                     </div>
 
                 </div>
-                <br><br><br><br><br><br><br>
+                <br>
                 <div class="buttom">
                     <button>Confirmar</button>
                 </div>

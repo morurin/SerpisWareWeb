@@ -7,7 +7,7 @@
     <link rel="icon" type="image/png" href="./Imágenes/logoPerso2.png">
 
     <meta charset="UTF-8">
-    <title>SerpisWare</title>
+    <title>Administración</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -21,77 +21,19 @@
     </script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link href='https://fonts.googleapis.com/css?family=Autour One' rel='stylesheet'>
-    <link rel="stylesheet" href="../../CSS/Index.css" />
+    
     <link rel="stylesheet" href="../../CSS/main.css" />
+    <link rel="stylesheet" href="../../CSS/administrar.css"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-    <style>
-        p{
-            font-family: 'Autour One', cursive;
-            font-size: 15px;
-        }
-        h1{
-            font-family: 'Autour One', cursive;
-            font-weight: bold;
-        }
-
-        .wrimagecard{
-            margin-top: 0;
-            margin-bottom: 1.5rem;
-            text-align: left;
-            position: relative;
-            background: #fff;
-            box-shadow: 12px 15px 20px 0px rgba(46,61,73,0.15);
-            border-radius: 4px;
-            transition: all 0.3s ease;
-        }
-        .wrimagecard .fa{
-            position: relative;
-            font-size: 70px;
-        }
-        .wrimagecard-topimage_header{
-            padding: 20px;
-        }
-        a.wrimagecard:hover, .wrimagecard-topimage:hover {
-            box-shadow: 2px 4px 8px 0px rgba(46,61,73,0.2);
-        }
-        .wrimagecard-topimage a {
-            width: 100%;
-            height: 100%;
-            display: block;
-        }
-        .wrimagecard-topimage_title {
-            padding: 20px 24px;
-            height: 80px;
-            padding-bottom: 0.75rem;
-            position: relative;
-        }
-        .wrimagecard-topimage a {
-            border-bottom: none;
-            text-decoration: none;
-            color: #525c65;
-            transition: color 0.3s ease;
-        }
-        .centered{
-            width:100%;
-            display: flex;
-            justify-content: center;
-        }
-
-        tr td{
-            font-size: 15px;
-        }
-
-    </style>
+    
 </head>
 
 
 <body>
 
-<?php require 'topnav.php';
+<?php include "./topnav_admin.php" ?>
 
-?>
 <!-- align div to center-->
 
 <main>
