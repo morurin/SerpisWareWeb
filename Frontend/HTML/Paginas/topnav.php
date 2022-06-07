@@ -46,4 +46,5 @@
     <a href="#" onclick="showContact()">Contáctenos</a>
     <p id="contact"> Correo electrónico: Serpis@ware.com <br><br>
         Número de teléfono: +34 111111111</p>
+    <a href="Administrar.php" >Administrar</a>
 </div>

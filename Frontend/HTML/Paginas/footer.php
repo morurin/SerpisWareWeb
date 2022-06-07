@@ -24,4 +24,6 @@
 </footer>
 
 
+<script src="../../JS/Checkout.js"> </script>
 <script src="../../JS/todasLasPaginas.js"> </script>
+<script src="../../JS/index.js"> </script>

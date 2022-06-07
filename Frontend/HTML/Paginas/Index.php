@@ -2,7 +2,10 @@
 <html lang="es">
 
 
+
 <head>
+    <link rel="icon" type="image/png" href="./Imágenes/logoPerso2.png">
+
     <meta charset="UTF-8">
     <title>SerpisWare</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -26,11 +29,13 @@
 
 
 <body>
-    
-
-    <?php include ("topnav.php");?>
 
 
+    <?php include ("topnav.php");
+    ?>
+
+
+    <?php     include '../../../Bases de Datos/db_connect.php';?>
 
     <main>
         <div class="wrapper">
@@ -83,8 +88,8 @@
             <div class="stuff-container">
                 
                 <?php
-                    include '../../../Bases de Datos/db_connect.php';
-                    $query = "SELECT * FROM productos ORDER BY idproducto DESC";
+
+                    $query = "SELECT * FROM Productos ORDER BY idproducto DESC";
                     $result = mysqli_query($pdo,$query);
                     while ($row = mysqli_fetch_array($result)){ ?>
                        <a class="<?php echo $row['tipoProducto'];?>" href ="../Paginas/Product_details.php?id=<?php echo $row['idproducto']?>">
