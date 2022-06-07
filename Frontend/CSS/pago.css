@@ -1,0 +1,195 @@
+
+.container{
+    display: grid;
+    margin: 2%;
+    margin-top: 120px;
+    grid-template-columns: 75% 35%;
+    gap: 28px;
+
+}
+
+.adress, .payment, .resume, .article{
+    padding: 15px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    background-color: #fff;;
+}
+
+.change{
+    display: flex;
+    flex-direction: row-reverse;
+}
+.change h4{
+    color: #6e83c7;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 13px;
+    
+}
+
+.resume div{
+    justify-content: center;
+    display: flex;
+}
+
+.resume h5 {
+    font-weight: bolder;
+    font-size: 13px;
+}
+
+.resume p {
+    font-family: sans-serif;
+    font-size: 12px;
+    margin-top: 5px;
+}
+.resume button {
+    margin-top: 7%;
+    justify-content: center;
+    align-items: center;
+    width: 99%;
+    height: 44px;
+    border-radius: 15px;
+    font-size: 16px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    background-color: #5a585a;
+}
+
+
+.article{
+    display: grid;
+    grid-template-columns: 30% 50%;
+}
+.article img {
+    width: 55%;
+}
+
+.text{
+    margin-top: 30px;
+}
+
+
+
+/*Modal------------------------------ */
+
+.adress-modal, .payment-modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1001;
+    /* Sit on top */
+    padding-top: 50px;
+    /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+    -webkit-animation-name: fadeIn;
+    /* Fade in the background */
+    -webkit-animation-duration: 0.9s;
+    animation-name: fadeIn;
+    animation-duration: 0.8s;
+}
+
+
+.modal-content {
+    border-radius: 15px;
+    margin: 20px;
+    background-color: rgb(243, 239, 239);
+    margin: auto;
+    padding: 40px;
+    border: 1px solid #888;
+    width: 60%;
+    height: 480px;
+    -webkit-animation-name: slideIn;
+    -webkit-animation-duration: 0.4s;
+    animation-name: slideIn;
+    animation-duration: 0.4s;
+}
+
+.modal-content h4 {
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 25px;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.all{
+    width: 97.4% !important;
+}
+
+.postal{
+    width: 90% !important;
+}
+.input input{
+    font: inherit;
+    margin-top: 20px;
+    font-family: Roboto, sans-serif;
+    padding: 5px 5%;
+    width: 95%;
+    height: 48px;
+    text-align: left;
+    font-size: 14px;
+    border-radius: 10px;
+    border: 1px solid rgba(204, 204, 204, 0.39);
+}
+
+.input1 select{
+    width: 90% !important;
+}
+
+.form-control{
+    font: inherit;
+    margin-top: 20px;
+    font-size: 14px;
+    font-family: sans-serif;
+    border-radius: 10px;
+    padding: 5px 5%;
+    width: 95%;
+    height: 48px;
+}
+
+
+
+.form-control option {
+    font-size: 15px;
+    font-family: sans-serif;
+    
+
+}
+
+
+.saveForm button {
+    margin-top: 7%;
+    justify-content: center;
+    align-items: center;
+    width: 125px;
+    height: 44px;
+    border-radius: 15px;
+    font-family: Autour One;
+    font-size: 12px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    background-color: #5a585a;
+}
+
+.buttom button{
+    margin-top: 20%;
+}
+

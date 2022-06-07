@@ -79,29 +79,21 @@ const renderAll = () => {
   renderPrices();
   renderFooter();
 };
-const renderFooter = () => {
-  let height = window.innerHeight;
-  const body = document.body;  
-  const bodyHeight = body.offsetHeight;
-  const footer = body.querySelector("footer");
-  console.log(bodyHeight, height);
-  if (height > bodyHeight) {
-    footer.style.marginTop = `${height - bodyHeight - 5}px`;
-    return
-  }
-  footer.style.marginTop ='3rem'
-};
+
 const renderPrices = () => {
   let carrito = JSON.parse(sessionStorage.getItem("Carrito"));
   const precioProductos = carrito.reduce((cont, val) => {
-    return parseInt(cont) + parseInt(val.precio) * parseInt(val.cantidad);
+    return parseFloat(cont) + parseFloat(val.precio) * parseFloat(val.cantidad);
   }, 0);
   const divPreciosProductos = document.querySelector("div.DescripcionCheckout");
   const pPreciosProductos = divPreciosProductos.querySelector("p");
   const pPrecioTotal = divPreciosProductos.querySelectorAll("p")[2];
-  pPreciosProductos.textContent = "Precio Productos: " + precioProductos + "€";
+
+
+
+  pPreciosProductos.textContent = "Precio de los productos: " + parseFloat(precioProductos).toFixed(2) + "€";
   pPrecioTotal.textContent =
-    "Precio Total: " + parseInt(precioProductos + 15) +"€";
+    "Precio Total: " + parseFloat(precioProductos + 10.5).toFixed(2) +"€";
   if (precioProductos === 0) {
     divPreciosProductos.innerHTML = "<p>Agregue productos a su carrito</p>";
     divPreciosProductos.parentElement.querySelector("button").disabled = true;
@@ -150,4 +142,4 @@ const addEventListenersToButtons = () => {
 };
 renderAll();
 
-//Ajustar el footer al final de la pagina si el contenido no es suficiente
+
