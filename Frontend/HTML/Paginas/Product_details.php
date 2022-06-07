@@ -123,7 +123,7 @@
         </div>
 
 
-        <!-- Pop up que muestra el prducto agregado -->
+        <!-- Modal que muestra el producto agregado -->
         <div id="popup-box" class="modal">
             <div class="modal-content">
                 <div class="left-stuff">

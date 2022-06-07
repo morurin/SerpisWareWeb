@@ -89,10 +89,10 @@
                                 <h1>Resumen del pedido</h1>
                                 <div class="DescripcionCheckout">
                                     <p></p>
-                                    <p>Precio del envio: 15€</p>
+                                    <p>Precio del envio: 10.5€</p>
                                     <p></p>
                                 </div>
-                                <div class='CheckoutFinal'> <button type="submit">Pagar</button></div>
+                                <div class='CheckoutFinal'> <button type="submit" onclick="location.href='./pago.php'">Proceder al pago</button></div>
                             </div>
                         </div>
                     </div>
