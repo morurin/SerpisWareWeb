@@ -88,9 +88,11 @@
                             <div class="ContainerCheckout">
                                 <h1>Resumen del pedido</h1>
                                 <div class="DescripcionCheckout">
+                                    <br>
                                     <p></p>
                                     <p>Precio del envio: 10.5€</p>
                                     <p></p>
+                                    <br>
                                 </div>
                                 <div class='CheckoutFinal'> <button type="submit" onclick="location.href='./pago.php'">Proceder al pago</button></div>
                             </div>
