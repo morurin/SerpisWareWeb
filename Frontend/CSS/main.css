@@ -37,9 +37,30 @@ body {
     background-color: rgb(243, 239, 239);
     color: #2c2c2c;
     
+}
+
+/*Todos los botones tienen los mismos colores y forma*/
+
+main button{
+
     
-    
-   
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2%;
+    border-radius: 12px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    background-color: #5a585a;
+}
+main button:hover{
+    background-color: #797579;
+
+}
+
+main button:active{
+    background-color: #685f8a;
+    transform: translateY(0.5px);
 }
 
 

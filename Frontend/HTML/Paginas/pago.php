@@ -17,7 +17,8 @@
 <?php include ("topnav.php");?>
 
 <main>
-    <div class="container">
+    <br><br><br><br>
+    <div class="container-pay">
         <div class="left">
             <div class="adress">
                 <h5>Dirección de entrega</h5>

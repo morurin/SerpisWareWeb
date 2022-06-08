@@ -45,7 +45,7 @@
                     
                 </section>
     
-                <br><br>
+                <br>
                 <button id='login'>Iniciar sesión</button>
                 <p class="registrarUsuario">¿Aún no tienes cuenta?<a class='registrarButton' onclick="showModal()"> Registrate</a></p>
                 
