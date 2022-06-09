@@ -8,13 +8,10 @@
 <main>
 
 
-
+<br><br><br><br><br><br><br><br><br>
     <div class="stuff-container">
 
         <!--Aviso de Edicion-->
-
-
-
 
         <?php  if(isset($_SESSION['mensaje'])) {?>
 
@@ -26,7 +23,7 @@
         <!--Fin Aviso de Edicion-->
 
         <!--texto administracion de tienda centrado-->
-        <br><br><br><br><br><br><br><br><br>
+        
         <div class="text-center mt-3">
             <h1>Administración de la tienda</h1>
             <p>Aquí podrás administrar los productos y las categorías de la tienda.</p>

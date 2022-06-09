@@ -32,6 +32,10 @@ main{
     
 }
 
+input{
+    outline: 0;
+}
+
 body {
     font-family: 'Lato', sans-serif;
     background-color: rgb(243, 239, 239);

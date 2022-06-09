@@ -15,6 +15,14 @@
     background-color: #fff;;
 }
 
+.adress span, p{
+    font-size: 15px;
+}
+.name{
+    font-size: 16px !important;
+    font-weight: bold;
+}
+
 .change{
     display: flex;
     flex-direction: row-reverse;
