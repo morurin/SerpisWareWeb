@@ -1,0 +1,308 @@
+
+.main-container{
+    margin: 2%;
+    
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: 20% 80%;
+    gap: 25px;
+}
+
+
+
+/* Style the tab */
+.tab {
+    
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+    width: 200px;
+    height: 300px;
+    border-radius: 5px;
+  }
+  
+  /* Style the buttons that are used to open the tab content */
+  .tab button {
+    display: block;
+    background-color: inherit;
+    color: black;
+    border-radius: 0 !important;
+    padding: 22px 16px;
+    width: 100%;
+    border: none;
+    outline: none;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  /* Change background color of buttons on hover */
+  .tab button:hover {
+    background-color: #ddd;
+  }
+  
+  /* Create an active/current "tab button" class */
+  .tab button.active {
+    background-color: #ccc;
+  }
+
+
+  /* Style the tab content */
+.tabcontent {
+    display: none;
+    position: relative;
+    
+    padding: 0px 12px;
+    width: 80%;
+    border-left: none;
+    height: 80%;
+    overflow:auto;
+  }
+
+
+  @media (max-width: 915px){
+      .grid{
+          display: grid;
+          justify-items: center;
+          grid-template-columns: 100%;     
+        } 
+        
+        .tab{
+            display: flex;
+            padding: 5px;
+            width: 100%;
+            height: 100px;
+        }
+
+        .tab button{
+            height: 100%;
+            font-size: 16px;
+            padding: 10px 15px;
+        }
+        .tabcontent{
+            width: 98%;
+            height: 100%;
+        }
+  }
+
+  .input{
+      display: grid;
+      grid-template-columns: 50% 15%;
+  }
+  
+
+
+  .label{
+    padding: 15px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    background-color: #fff;;
+  }
+
+  .label label {
+      font-size: 18px;
+      font-weight: bold;
+  }
+
+  .label h5{
+      font-size: 15px;
+  }
+
+  .input input{
+    font: inherit;
+    outline: 0;
+    margin-top: 5px;
+    font-family: Roboto, sans-serif;
+    padding: 5px 5%;
+    width: 95%;
+    height: 48px;
+    text-align: left;
+    font-size: 14px;
+    border-radius: 10px;
+    border: 1px solid rgba(204, 204, 204, 0.39);
+
+}
+
+
+
+.adress{
+    padding: 15px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    background-color: #fff;;
+}
+
+.adress span, p{
+    font-size: 15px;
+}
+.name{
+    font-size: 16px !important;
+    font-weight: bold;
+}
+
+.change{
+    display: flex;
+    flex-direction: row-reverse;
+}
+.change h5{
+    color: #6e83c7;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 15px;
+    
+}
+
+.grid-label{
+    display: grid;
+    grid-template-columns: 30% 50% 20%;
+}
+.grid-label img {
+    width: 55%;
+}
+
+.text{
+    margin-top: 5px;
+}
+
+.text h4{
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.text h5{
+
+    font-size: 13px;
+}
+
+
+/*Modal------------------------------ */
+
+.adress-modal, .name-modal, .email-modal, .number-modal, .password-modal {
+
+    align-items: center;
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1001;
+    /* Sit on top */
+    padding-top: 60px;
+    /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+    -webkit-animation-name: fadeIn;
+    /* Fade in the background */
+    -webkit-animation-duration: 0.9s;
+    animation-name: fadeIn;
+    animation-duration: 0.8s;
+}
+
+.name-modal, .email-modal, .number-modal, .password-modal{
+   
+    padding-top: 185px !important;
+    
+}
+
+.modal-content, .modal-content-2, .modal-content-2P {
+    border-radius: 15px;
+    margin: 20px;
+    background-color: rgb(243, 239, 239);
+    margin: auto;
+    padding: 40px;
+    border: 1px solid #888;
+    width: 60%;
+    height: 480px;
+    -webkit-animation-name: slideIn;
+    -webkit-animation-duration: 0.4s;
+    animation-name: slideIn;
+    animation-duration: 0.4s;
+}
+
+.modal-content-2 {
+    
+    height: 200px !important;   
+}
+
+.modal-content-2P{
+    height: 300px !important;
+}
+
+.modal-content h4 {
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 25px;
+}
+
+.grid-modal{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.all{
+    width: 97.4% !important;
+}
+
+.postal{
+    width: 90% !important;
+}
+.input-modal input{
+    font: inherit;
+    margin-top: 20px;
+    font-family: Roboto, sans-serif;
+    padding: 5px 5%;
+    width: 95%;
+    height: 48px;
+    text-align: left;
+    font-size: 14px;
+    border-radius: 10px;
+    border: 1px solid rgba(204, 204, 204, 0.39);
+}
+
+.input1 select{
+    width: 90% !important;
+}
+
+.form-control{
+    font: inherit;
+    margin-top: 20px;
+    font-size: 14px;
+    font-family: sans-serif;
+    border-radius: 10px;
+    padding: 5px 5%;
+    width: 95%;
+    height: 48px;
+}
+
+
+
+.form-control option {
+    font-size: 15px;
+    font-family: sans-serif;
+    
+
+}
+
+
+.saveForm button {
+    margin-top: 3%;
+    width: 125px;
+    height: 44px;
+    font-size: 16px;
+   
+}
+
+.buttom button{
+    margin-top: 20%;
+}

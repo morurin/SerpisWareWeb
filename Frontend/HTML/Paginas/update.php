@@ -178,6 +178,8 @@ if(isset($_POST['update'])){
 
 </div>
 <?php include './footer.php' ?>
+    <br><br><br>
+<script src="../../JS/todasLasPaginas.js"></script>
 </body>
 
 

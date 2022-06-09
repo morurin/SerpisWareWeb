@@ -8,13 +8,13 @@
 <main>
 
 
-
+<br><br><br><br><br><br><br><br><br>
     <div class="stuff-container">
 
 
 
         <!--texto administracion de tienda centrado-->
-        <br><br><br><br><br><br><br><br><br>
+        
         <div class="text-center mt-3">
             <h1>Administración de la tienda</h1>
             <p>Aquí podrás administrar los productos y las categorías de la tienda.</p>
