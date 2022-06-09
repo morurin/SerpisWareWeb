@@ -11,7 +11,7 @@
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
     <link rel="stylesheet" href="../../CSS/main.css" />
-    <link rel="stylesheet" href="../../CSS/LoginRegister.css" />
+    <link rel="stylesheet" href="../../CSS/loginRegistro.css" />
     
 
 
@@ -45,9 +45,9 @@
                     
                 </section>
     
-                <br><br>
-                <button id='login' class="mb-3">Iniciar sesión</button>
-                <p class="xd">¿Aún no tienes cuenta?<a class='xd' onclick="showModal()"> Registrate</a></p>
+                <br>
+                <button id='login'>Iniciar sesión</button>
+                <p class="registrarUsuario">¿Aún no tienes cuenta?<a class='registrarButton' onclick="showModal()"> Registrate</a></p>
                 
             </form>
         </div>

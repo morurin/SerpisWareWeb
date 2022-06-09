@@ -1,9 +1,9 @@
 
-.container{
+.container-pay{
     display: grid;
     margin: 2%;
-    margin-top: 120px;
-    grid-template-columns: 75% 35%;
+    
+    grid-template-columns: 64% 33%;
     gap: 28px;
 
 }
@@ -13,6 +13,14 @@
     margin-bottom: 30px;
     border-radius: 5px;
     background-color: #fff;;
+}
+
+.adress span, p{
+    font-size: 15px;
+}
+.name{
+    font-size: 16px !important;
+    font-weight: bold;
 }
 
 .change{
@@ -43,17 +51,12 @@
     margin-top: 5px;
 }
 .resume button {
+
     margin-top: 7%;
-    justify-content: center;
-    align-items: center;
     width: 99%;
     height: 44px;
-    border-radius: 15px;
     font-size: 16px;
-    border: none;
-    color: #fff;
-    cursor: pointer;
-    background-color: #5a585a;
+    
 }
 
 
@@ -74,6 +77,17 @@
 
     font-size: 17px;
 }
+
+@media (max-width: 720px){
+
+    .container-pay{
+        display: grid;
+        grid-template-columns: 100%;
+        
+         
+    }
+}
+
 
 
 
@@ -182,16 +196,10 @@
 
 .saveForm button {
     margin-top: 7%;
-    justify-content: center;
-    align-items: center;
     width: 125px;
     height: 44px;
-    border-radius: 15px;
     font-size: 16px;
-    border: none;
-    color: #fff;
-    cursor: pointer;
-    background-color: #5a585a;
+   
 }
 
 .buttom button{
