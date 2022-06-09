@@ -1,5 +1,6 @@
 
 
+
 .login-container{
     margin-top: 25px;
     display: flex;
@@ -21,19 +22,15 @@
 
 .registrarButton {
     cursor: pointer;
-    font-size: 1.8rem;
+    font-size: 1.3rem;
     font-family: Roboto;
 
 }
 .registrarUsuario {
     padding-top: 10px;
-    font-size: 1.8rem;
-    font-family: Roboto;
+    font-family: Robotoffygy;
 
 }
-
-
-
 
 
 .formularioRegistro h3 {

@@ -11,19 +11,7 @@
 
     <div class="stuff-container">
 
-        <!--Aviso de Edicion-->
 
-
-
-
-        <?php  if(isset($_SESSION['mensaje'])) {?>
-
-            <div class="alert-<?php echo $_SESSION['color_mensaje']?> mb-5">
-                <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
-                <h4><?php echo $_SESSION['mensaje'];?></h4>
-            </div>
-            <?php   session_unset();  } ?>
-        <!--Fin Aviso de Edicion-->
 
         <!--texto administracion de tienda centrado-->
         <br><br><br><br><br><br><br><br><br>
@@ -38,9 +26,20 @@
 
 
         <div class="container">
+            <!--Aviso de Edicion-->
+            <?php  if(isset($_SESSION['mensaje'])) {?>
 
-            <button type="button" class="btn btn-success btn-lg btn-block"> <i class="fa fa-plus" aria-hidden="true"></i>
-                 Añadir Productos</button>
+                <div class="alert-<?php echo $_SESSION['color_mensaje']?> mb-5">
+                    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                    <h4><?php echo $_SESSION['mensaje'];?></h4>
+                </div>
+                <?php   session_unset();  } ?>
+            <!--Fin Aviso de Edicion-->
+
+            <a href="nuevo.php">
+                <button type="button" class="btn btn-success btn-lg btn-block" > <i class="fa fa-plus" aria-hidden="true"></i>
+                    Añadir Productos</button></a>
+
 
 
             <table class="table table-bordered align-middle my-3 mt-5" id="tabla-productos">
@@ -68,7 +67,7 @@
                     <td><?php echo $row['precioProducto']; ?> <b>€</b> </td>
                     <td><?php echo $row['tipoProducto']; ?></td>
                     <td class="text-center p-5">
-                        <a href="./update.php?id=<?php echo $row['idproducto']; ?>" class="btn btn-secondary p-3">
+                        <a href="update.php?id=<?php echo $row['idproducto']; ?>" class="btn btn-secondary p-3">
                             <i class="fa fa-edit fa-2x"></i>
                         </a>
 

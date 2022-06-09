@@ -46,8 +46,8 @@
                 </section>
     
                 <br><br>
-                <button id='login'>Iniciar sesión</button>
-                <p class="registrarUsuario">¿Aún no tienes cuenta?<a class='registrarButton' onclick="showModal()"> Registrate</a></p>
+                <button id='login' class="mb-3">Iniciar sesión</button>
+                <p class="xd">¿Aún no tienes cuenta?<a class='xd' onclick="showModal()"> Registrate</a></p>
                 
             </form>
         </div>
@@ -59,7 +59,7 @@
         <div id="popup-box" class="modal">
             <div class="modal-content-register">
 
-                <form class="formularioRegistro">
+                <form class="formularioRegistro" method="POST" action="./models/clients/create_user.php">
 
                     <h3>Registrate</h3>
                     <div class="registroInput">

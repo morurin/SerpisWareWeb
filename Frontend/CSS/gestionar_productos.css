@@ -4,6 +4,10 @@
     font-size: 70%;
 }
 
+p, .form-control{
+font-size: 1.8rem !important;
+}
+
 td{
     font-size: 20px;
     text-align: center;
@@ -13,8 +17,8 @@ b{
 }
 
 .productito{
-    width: 100% !important;
-    height: 100% !important;
+    width: 80% !important;
+    height: 80% !important;
 }
 
 table {

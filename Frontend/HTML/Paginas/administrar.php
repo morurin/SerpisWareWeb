@@ -26,6 +26,12 @@
     <link rel="stylesheet" href="../../CSS/administrar.css"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+    <style>
+        .stuff-container {
+            margin-top: 100px !important;
+        }
+    </style>
     
 </head>
 
@@ -37,16 +43,16 @@
 <!-- align div to center-->
 
 <main>
-        <div class="stuff-container">
+        <div class="stuff-container ">
             <!--texto administracion de tienda centrado-->
-            <div class="text-center">
+            <div class="text-center mt-5">
                 <h1>Administración de la tienda</h1>
                 <p>Aquí podrás administrar los ítems de la tienda</p>
             </div>
             <div class="container-fluid mt-5 ">
                 <div class="row centered">
                     <!-- Usuarios -->
-                    <div class="col-md-2 col-sm-4 mt-4">
+                    <div class="col-md col-sm-4 mt-4">
                         <div class="wrimagecard wrimagecard-topimage">
                             <a href="#">
                                 <div class="wrimagecard-topimage_header" style="background-color:rgba(187, 120, 36, 0.1) ">
@@ -60,7 +66,7 @@
                         </div>
                     </div>
                     <!-- Productos -->
-                    <div class="col-md-2 col-sm-4 mt-4">
+                    <div class="col-md col-sm-4 mt-4">
                         <div class="wrimagecard wrimagecard-topimage">
                             <a href="gestionar_productos.php">
                                 <div class="wrimagecard-topimage_header" style="background-color: rgba(22, 160, 133, 0.1)">
@@ -74,7 +80,7 @@
                         </div>
                     </div>
                     <!-- carritos -->
-                    <div class="col-md-2 col-sm-4 mt-4">
+                    <div class="col-md col-sm-4 mt-4">
                         <div class="wrimagecard wrimagecard-topimage">
                             <a href="#">
                                 <div class="wrimagecard-topimage_header" style="background-color:  rgba(213, 15, 37, 0.1)">
@@ -90,7 +96,7 @@
                         </div>
                     </div>
                     <!-- Facturacion -->
-                    <div class="col-md-2 col-sm-4 mt-4">
+                    <div class="col-md col-sm-4 mt-4">
                                             <div class="wrimagecard wrimagecard-topimage">
                                                 <a href="#">
                                                     <div class="wrimagecard-topimage_header" style="background-color:  rgba(51, 105, 232, 0.1)">

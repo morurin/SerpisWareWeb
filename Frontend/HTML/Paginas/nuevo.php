@@ -1,6 +1,6 @@
 <?php
-require '../../../Bases de Datos/db_connect.php';
 
+require '../../../Bases de Datos/db_connect.php';
 if(isset($_GET['id'])){
     $id = $_GET['id'];
     $query = "SELECT * FROM productos WHERE idproducto = $id";
@@ -25,19 +25,15 @@ if(isset($_POST['update'])){
     $especificacion = $_POST['especificacion'];
     $sobreproducto = $_POST['sobreproducto'];
     $imagen = $_POST['imagen'];
-    $upload = $_POST['upload'];
+
 
     $filename = $_FILES["imagen"]["name"];
     $tempname = $_FILES["imagen"]["tmp_name"];
     $folder = "../../../Imágenes/".$filename;
     move_uploaded_file($tempname, $folder);
 
-    if($upload == 1 ){
-        $query = "UPDATE productos SET nombreProducto = '$nombre', precioProducto = '$precio', tipoProducto = '$categoria', especProducto = '$especificacion', sobreProducto = '$sobreproducto', imagenProducto = '$filename' WHERE idproducto = $id";
-    }else{
-        $query = "UPDATE productos SET nombreProducto = '$nombre', precioProducto = '$precio', tipoProducto = '$categoria', especProducto = '$especificacion', sobreProducto = '$sobreproducto' WHERE idproducto = $id";
-    }
-
+    //insert into new object
+    $query = "INSERT INTO productos (nombreProducto, precioProducto, tipoProducto, especProducto, sobreProducto, imagenProducto) VALUES ('$nombre', '$precio', '$categoria', '$especificacion', '$sobreproducto', '$filename')";
 
     $result = mysqli_query($pdo, $query);
 
@@ -54,28 +50,28 @@ if(isset($_POST['update'])){
 ?>
 
 <head>
-<link rel="icon" type="image/png" href="../../../Imágenes/logoPerso2.png">
+    <link rel="icon" type="image/png" href="../../../Imágenes/logoPerso2.png">
 
-<meta charset="UTF-8">
-<title>SerpisWare</title>
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
-</script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
-</script>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <title>SerpisWare</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
 
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
-<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-<link rel="stylesheet" href="../../CSS/main.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <link rel="stylesheet" href="../../CSS/main.css">
 
     <style>
         label,input {
@@ -115,13 +111,13 @@ if(isset($_POST['update'])){
                                     <div class="col-9">
                                         <div class="form-group">
                                             <label for="nombre">Nombre</label>
-                                            <input type="text" class="form-control" name="nombre" value="<?php echo $nombre; ?>">
+                                            <input type="text" class="form-control" name="nombre" >
                                         </div>
                                     </div>
                                     <div class="col-3">
                                         <div class="form-group">
                                             <label for="precio">Precio</label>
-                                            <input type="text" class="form-control" name="precio" value="<?php echo $precio; ?>">
+                                            <input type="text" class="form-control" name="precio" >
                                         </div>
                                     </div>
                                 </div>
@@ -132,7 +128,7 @@ if(isset($_POST['update'])){
                                         <div class="form-group">
                                             <label for="categoria">Categoria</label>
                                             <select class="form-control" name="categoria">
-                                                <option value=" <?php echo $categoria; ?>" hidden disabled><?php echo $categoria; ?> </option>
+                                                <option value="" hidden >Selecciona Una Categoria </option>
                                                 <option value="procesadores">Procesador</option>
                                                 <option value="placasBase">Placa base</option>
                                                 <option value="ram">RAM</option>
@@ -152,21 +148,14 @@ if(isset($_POST['update'])){
 
                                 <div class="form-group">
                                     <label for="especificacion">Especificaciones</label>
-                                    <textarea class="form-control" name="especificacion" rows="3"><?php echo $especificacion; ?></textarea>
+                                    <textarea class="form-control" name="especificacion" rows="3"></textarea>
                                 </div>
                                 <div class="form-group">
                                     <label for="sobreproducto">Sobreproducto</label>
-                                    <textarea class="form-control" name="sobreproducto" rows="3"><?php echo $sobreproducto; ?></textarea>
-                                </div>
-                                <!-- checkbox subir imagen -->
-                                <div class="form-group">
-                                    <label for="upload" class="uploadcheck mx-3" >Actualizar Imagen</label>
-                                    <input type="checkbox"   name="upload" value="1">
-
+                                    <textarea class="form-control" name="sobreproducto" rows="3"></textarea>
                                 </div>
 
-
-                                <button type="submit" class="btn btn-primary mt-5" name="update">Actualizar</button>
+                                <button type="submit" class="btn btn-primary mt-5" name="update">Añadir</button>
                             </form>
                         </div>
                     </div>
@@ -179,6 +168,7 @@ if(isset($_POST['update'])){
 </div>
 <?php include './footer.php' ?>
 </body>
+
 
 
 
