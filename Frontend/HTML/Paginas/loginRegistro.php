@@ -28,27 +28,28 @@ session_start();
     <main>
 
 
+        <!--Aviso de Edicion-->
+        <br><br><br>
+        <?php  if(isset($_SESSION['mensaje'])) {?>
 
+        <div class="alert-<?php echo $_SESSION['color_mensaje']?> mb-5">
+            <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+            <h4 class="alert-text"><?php echo $_SESSION['mensaje'];?></h4>
+        </div>
+
+
+        <?php
+
+        unset($_SESSION['mensaje']);
+        unset($_SESSION['color_mensaje']);
+        }
+        ?>
+        <!--Fin Aviso de Edicion-->
         <div class="login-image">
             <a><img src="../../../Imágenes/logoPerso2.png" /></a>
             <h1 class="brandName">SerpisWare</h1>
         </div>
-        <!--Aviso de Edicion-->
-        <?php  if(isset($_SESSION['mensaje'])) {?>
-
-            <div class="alert-<?php echo $_SESSION['color_mensaje']?> mb-5">
-                <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
-                <h4><?php echo $_SESSION['mensaje'];?></h4>
-            </div>
-
-
-            <?php
-
-            unset($_SESSION['mensaje']);
-            unset($_SESSION['color_mensaje']);
-        }
-        ?>
-        <!--Fin Aviso de Edicion-->
+        
 
         <div class="login-container">
 

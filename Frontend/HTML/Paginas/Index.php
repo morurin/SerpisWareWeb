@@ -37,6 +37,7 @@
     <?php     include '../../../Bases de Datos/db_connect.php';?>
 
     <main>
+        <br><br><br>
         <div class="wrapper">
             <div class="login-image">
                 <a><img src="../../../Imágenes/logoPerso2.png" /></a>
