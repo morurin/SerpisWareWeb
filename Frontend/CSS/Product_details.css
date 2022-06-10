@@ -31,7 +31,8 @@
 .buy h2 {
     margin-top: 15px;
     margin-bottom: 20px;
-    font-size: 20px;
+    font-weight:400;
+    font-size: 24px;
 }
 
 .buy button {
@@ -49,7 +50,7 @@
 
 .productDescription p{
     margin-right: 158px;
-    font-size: 14px;
+    font-size: 16px;
 }
 .productDescription h2{
     font-weight: bold;
@@ -59,7 +60,7 @@
     font-weight: bold;
 }
 .specs p{
-    font-size: 14px;
+    font-size: 16px;
 
 }
 

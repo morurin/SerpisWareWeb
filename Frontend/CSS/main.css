@@ -120,6 +120,14 @@ span {
 
 }
 
+.user-display{
+    width: 80px;
+    height: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
 .topnav a {
     display: flex;
     height: 50px;

@@ -204,6 +204,10 @@
 
 .stuff-container h2 {
     margin-top: -54px;
+    width: 245px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
     border-radius: 10px;
     background-color: #fff;
     padding: 10px;
