@@ -22,6 +22,13 @@
             $u_nombre = $row['username'];
             $u_email = $row['correo'];
             $u_tel= $row['telefono']; 
+
+            $u_rnombre = $row['nombre'];
+            $u_direccion = $row['direccion'];
+            $u_provincia = $row['provincia'];
+            $u_municipio = $row['municipio'];
+            $u_postal = $row['postal'];
+
              
         }
 ?>
@@ -130,12 +137,24 @@
                     <div class="adress">
                         <h5>Dirección de entrega</h5>
                         <!--Esto de cambiar dependiendo de los datos almacenados -->
-                        <div>
-                            <span class="name">Mario Lopez</span> /<span>305050006</span>
-                            <p>No sé que del moro piso 3</p>
-                            <span>Valencia,</span> <span>almassera,</span> <span>12345</span>
+
+                        <?php
+                        if($u_rnombre != null){
+
+                            echo "<div>";
+                            echo   "<span class='name'>$u_rnombre</span> /<span>$u_tel</span>";
+                            echo   "<p>$u_direccion</p>";
+                            echo   "<span>$u_provincia,</span><span>$u_municipio,</span><span>$u_postal</span>";
+                            echo  "</div>";
                             
-                        </div>
+                        }
+                        else{
+                            echo "<p>Añade una dirección</p>";
+                        }
+                        
+                        
+                        ?>
+                       
 
                         <div class="change">
                             <h5 onclick="showModalA()">Cambiar</h5>

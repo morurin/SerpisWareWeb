@@ -55,8 +55,11 @@ CREATE TABLE Usuario(
                         username VARCHAR(20) NOT NULL,
                         nombre VARCHAR(60),
                         correo VARCHAR(50),
-                        telefono int
+                        telefono INT (12),
                         direccion VARCHAR (50),
+                        provincia VARCHAR (20),
+                        municipio VARCHAR (20),
+                        postal INT (5)
                         Rol VARCHAR (20) DEFAULT ('User'),
                         id_metodopago INT,
                         PRIMARY KEY(idUsuario),
