@@ -63,8 +63,8 @@ lazy_session_start();
     <?php
 
     if (isset($_SESSION['username'])) {
-    if($_SESSION['rol'] = "admin"){?>
-        <a href="Administrar.php" >Administrar</a>
+    if(strcmp($_SESSION['rol'],"admin") == 0){?>
+        <a href="Administrar.php" >Administrar </a>
         <?php
     }
     }
@@ -72,16 +72,13 @@ lazy_session_start();
 
 
 
-
-
-
     <?php
     if (isset($_SESSION['username'])) {?>
-        <a href="./models/clients/Logout.php">Cerrar sesión</a>
+        <a href="./models/clients/Logout.php">Cerrar sesión </a>
         <?php
     }else{
         ?>
-        <a href="./loginRegistro.php">Iniciar sesión</a>
+        <a href="./loginRegistro.php">Iniciar sesión </a>
     <?php
     }
     ?>

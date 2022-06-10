@@ -1,5 +1,9 @@
 <?php
 require '../../../Bases de Datos/db_connect.php';
+if (!isset($_SESSION)) {
+    session_start();
+}
+
 
 if(isset($_GET['id'])){
     $id = $_GET['id'];

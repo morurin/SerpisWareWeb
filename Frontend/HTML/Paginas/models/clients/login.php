@@ -22,7 +22,7 @@ if (isset($_POST['login'])) {
         if ($email == $emailbd && $password == $passwordbd) {
             $_SESSION['email'] = $email;
             $_SESSION['username'] = $rowemail['username'];
-            $_SESSION['rol'] = $rowemail['rol'];
+            $_SESSION['rol'] = $rowemail['Rol'];
             header("Location: ../../../../../Frontend/HTML/Paginas/index.php");
         } else {
             $_SESSION['mensaje'] = 'Error al iniciar sesión';

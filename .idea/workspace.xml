@@ -5,17 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="58c51d25-c35f-4401-a2ff-71e04cea7ece" name="Changes" comment="merge con top y agrego base de datos">
-      <change afterPath="$PROJECT_DIR$/Bases de Datos/lazy_session.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frontend/HTML/Paginas/models/clients/Logout.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f334ed41-7d59-4377-8c3f-380b3cf1e09f.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/f334ed41-7d59-4377-8c3f-380b3cf1e09f.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bases de Datos/db_connect.php" beforeDir="false" afterPath="$PROJECT_DIR$/Bases de Datos/db_connect.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/HTML/Paginas/Index.php" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/HTML/Paginas/Index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/HTML/Paginas/gestionar_productos.php" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/HTML/Paginas/gestionar_productos.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/HTML/Paginas/loginRegistro.php" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/HTML/Paginas/loginRegistro.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/HTML/Paginas/models/clients/Logout.php" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/HTML/Paginas/models/clients/Logout.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/HTML/Paginas/models/clients/create_user.php" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/HTML/Paginas/models/clients/create_user.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/HTML/Paginas/models/clients/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/HTML/Paginas/models/clients/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/HTML/Paginas/models/products/borrar.php" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/HTML/Paginas/models/products/borrar.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/HTML/Paginas/nuevo.php" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/HTML/Paginas/nuevo.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/HTML/Paginas/topnav.php" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/HTML/Paginas/topnav.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/HTML/Paginas/topnav_admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/HTML/Paginas/topnav_admin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/HTML/Paginas/update.php" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/HTML/Paginas/update.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,7 +97,7 @@
       <workItem from="1654748799065" duration="3099000" />
       <workItem from="1654814119495" duration="1830000" />
       <workItem from="1654819481171" duration="613000" />
-      <workItem from="1654825534702" duration="13895000" />
+      <workItem from="1654825534702" duration="16366000" />
     </task>
     <task id="LOCAL-00001" summary="Modificaciones nazhunas, separacion header-footer y conexion base datos productos">
       <created>1654405494931</created>
