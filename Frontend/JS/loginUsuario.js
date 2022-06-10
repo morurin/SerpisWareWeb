@@ -3,7 +3,7 @@ var modal = document.getElementById("popup-box");
 
 
 
-//Modal registro
+//Modal registroo
 
 document.addEventListener("click",
 function(event){
