@@ -110,7 +110,7 @@
                     
                     
                     <div class="input">
-                        <input placeholder="Número de teléfono" type="number" required>
+                        <input placeholder="Número de teléfono" type="tel" maxlength="15">
                     </div>
 
                 </div>

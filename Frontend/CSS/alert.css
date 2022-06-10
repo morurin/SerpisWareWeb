@@ -2,29 +2,29 @@
 
 .alert-danger {
     margin-left: 25%;
-    padding: 20px;
+    padding: 15px;
     background-color: #f44336;
     color: white;
     width: 50%;
-    border-radius: 5px;
+    border-radius: 8px;
 }
 
 .alert-success {
     margin-left: 25%;
-    padding: 20px;
+    padding: 15px;
     background-color: #4CAF50;
     color: white;
     width: 50%;
-    border-radius: 5px;
+    border-radius: 8px;
 }
 
 .alert-warning {
     margin-left: 25%;
-    padding: 20px;
+    padding: 15px;
     background-color: #ff9800;
     color: white;
     width: 50%;
-    border-radius: 5px;
+    border-radius: 8px;
 
 }
 
