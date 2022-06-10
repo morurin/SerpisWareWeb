@@ -1,4 +1,7 @@
-<!DOCTYPE html>
+<?php
+session_start();
+?>
+><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -12,10 +15,7 @@
 
     <link rel="stylesheet" href="../../CSS/main.css" />
     <link rel="stylesheet" href="../../CSS/loginRegistro.css" />
-    
-
-
-   
+    <link rel="stylesheet" href="../../CSS/alert.css" />
 </head>
 
 <body>
@@ -26,35 +26,50 @@
 
     
     <main>
+
+
+
         <div class="login-image">
             <a><img src="../../../Imágenes/logoPerso2.png" /></a>
             <h1 class="brandName">SerpisWare</h1>
         </div>
+        <!--Aviso de Edicion-->
+        <?php  if(isset($_SESSION['mensaje'])) {?>
 
+            <div class="alert-<?php echo $_SESSION['color_mensaje']?> mb-5">
+                <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                <h4><?php echo $_SESSION['mensaje'];?></h4>
+            </div>
+
+
+            <?php
+
+            unset($_SESSION['mensaje']);
+            unset($_SESSION['color_mensaje']);
+        }
+        ?>
+        <!--Fin Aviso de Edicion-->
 
         <div class="login-container">
-            <form class="formularioLogin">
+
+            <form class="formularioLogin" action="./models/clients/login.php" method="POST">
                 <section class="formularioContainerGrande">
                     <div class="divPrimarios">
-                        <input id="registroEmail" placeholder="Correo electrónico" type="text" required autocomplete="email" />
+                        <input id="registroEmail" placeholder="Correo electrónico" type="text" required autocomplete="email" name="email"/>
                     </div>
     
                     <div class="divPrimarios">
-                        <input id="registrousername" placeholder="Constraseña" type="password" required autocomplete="off" />
+                        <input id="registrousername" placeholder="Constraseña" type="password" required autocomplete="off" name="password"/>
                     </div>
                     
                 </section>
     
                 <br>
-                <button id='login'>Iniciar sesión</button>
+                <button id='login' name="login" type="submit">Iniciar sesión</button>
                 <p class="registrarUsuario">¿Aún no tienes cuenta?<a class='registrarButton' onclick="showModal()"> Registrate</a></p>
                 
             </form>
         </div>
-        
-
-
-
 
         <div id="popup-box" class="modal">
             <div class="modal-content-register">
@@ -63,15 +78,15 @@
 
                     <h3>Registrate</h3>
                     <div class="registroInput">
-                        <input placeholder="Correo electrónico" type="email" autocomplete="email" required />
+                        <input placeholder="Correo electrónico" name="email" type="email" autocomplete="email" required />
                     </div>
         
                     <div class="registroInput">
-                        <input placeholder="Contraseña" type="password" required autocomplete="off" />
+                        <input placeholder="Contraseña" type="password" name="password" required autocomplete="off" />
                     </div>
             
     
-                        <button>Crear cuenta</button>
+                        <button type="submit" name="create">Crear cuenta</button>
                 </form>
             
             </div>

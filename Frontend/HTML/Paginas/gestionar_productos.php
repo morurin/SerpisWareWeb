@@ -33,7 +33,10 @@
                     <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
                     <h4><?php echo $_SESSION['mensaje'];?></h4>
                 </div>
-                <?php   session_unset();  } ?>
+                <?php
+                unset($_SESSION['mensaje']);
+                unset($_SESSION['color_mensaje']);
+            } ?>
             <!--Fin Aviso de Edicion-->
 
             <a href="nuevo.php">

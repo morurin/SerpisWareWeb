@@ -39,10 +39,13 @@ if(isset($_POST['update'])){
 
     if(!$result){
         //echo "<script>alert('Error al actualizar el producto');</script>";
-        $_SESSION['mensaje'] = 'Error al actualizar ';
+        $_SESSION['mensaje'] = 'Error al crear producto ';
+        $_SESSION['color_mensaje'] = 'warning';
+        header("Location: gestionar_productos.php");
+
     }
 
-    $_SESSION['mensaje'] = ' "'.$id.'" Editado exitosamente';
+    $_SESSION['mensaje'] = ' Producto "'.$id.'" Creado con éxito :)';
     $_SESSION['color_mensaje'] = 'success';
     header("Location: gestionar_productos.php");
 
