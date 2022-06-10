@@ -4,7 +4,6 @@ try {
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);*/
         //ini_set('display_errors', '0');     // CALLATE LOS ERRORES
 
-    session_start();
     $pdo = mysqli_connect(
         'localhost',
         'root',

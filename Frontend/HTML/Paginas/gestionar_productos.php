@@ -1,5 +1,7 @@
 <?php require '../../../Bases de Datos/db_connect.php';?>
-<?php include 'header.php'; ?>
+<?php include 'header.php';
+?>
+
 
 <head>
 <link rel="stylesheet" href="../../CSS/gestionar_productos.css" />

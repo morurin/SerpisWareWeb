@@ -1,4 +1,9 @@
 
+<?php
+require '../../../Bases de Datos/lazy_session.php';
+lazy_session_start();
+?>
+
 <nav id="topnav" class="topnav">
 
     <div class="bar">
@@ -19,7 +24,15 @@
             </svg>
             <h4>Carrito</h4><span id="car">0</span>
         </a>
-        <a href="./loginRegistro.php"> <h4>Mi cuenta</h4>
+
+
+        <?php if(isset($_SESSION['email'])) { ?>
+            <a href="tu_cuenta.php" > <h4> <?php echo $_SESSION['username'] ?></h4>
+        <?php } else { ?>
+        <a href="./loginRegistro.php"> <h4>Iniciar sesión</h4>
+        <?php } ?>
+
+
             <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi-person-circle"
                  viewBox="0 0 16 16">
                 <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
@@ -46,5 +59,30 @@
     <a href="#" onclick="showContact()">Contáctenos</a>
     <p id="contact"> Correo electrónico: Serpis@ware.com <br><br>
         Número de teléfono: +34 111111111</p>
-    <a href="Administrar.php" >Administrar</a>
+
+    <?php
+
+    if (isset($_SESSION['username'])) {
+    if($_SESSION['rol'] = "admin"){?>
+        <a href="Administrar.php" >Administrar</a>
+        <?php
+    }
+    }
+    ?>
+
+
+
+
+
+
+    <?php
+    if (isset($_SESSION['username'])) {?>
+        <a href="./models/clients/Logout.php">Cerrar sesión</a>
+        <?php
+    }else{
+        ?>
+        <a href="./loginRegistro.php">Iniciar sesión</a>
+    <?php
+    }
+    ?>
 </div>

@@ -1,7 +1,5 @@
-<?php
-session_start();
-?>
-><!DOCTYPE html>
+
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -66,7 +64,7 @@ session_start();
                 </section>
     
                 <br>
-                <button id='login' name="login" type="submit">Iniciar sesión</button>
+                <button  name="login" type="submit">Iniciar sesión</button>
                 <p class="registrarUsuario">¿Aún no tienes cuenta?<a class='registrarButton' onclick="showModal()"> Registrate</a></p>
                 
             </form>

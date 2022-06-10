@@ -1,8 +1,6 @@
 
 <html lang="es">
 
-
-
 <head>
     <link rel="icon" type="image/png" href="./Imágenes/logoPerso2.png">
 
@@ -50,15 +48,15 @@
 
 
             <nav class="navbar navbar-expand-lg navbar-mainbg">
-            
+
                 <div class="navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ml-auto">
-    
+
                         <div class="hori-selector">
                             <div class="left"></div>
                             <div class="right"></div>
                         </div>
-    
+
                         <li class="nav-item active">
                             <a class="nav-link" onclick="general()" href="javascript:void(0);">Todos</a>
                         </li>
@@ -83,10 +81,10 @@
                     </ul>
                 </div>
             </nav>
-                        
-            
+
+
             <div class="stuff-container">
-                
+
                 <?php
 
                     $query = "SELECT * FROM Productos ORDER BY idproducto DESC";
@@ -109,16 +107,16 @@
 
                         }?>
 
-               
+
             </div>
 
         </div>
 
-        
+
 
     </main>
 
-    
+
 
     <?php include ("footer.php")?>
 

@@ -1,3 +1,11 @@
+<?php
+require '../../../Bases de Datos/lazy_session.php';
+lazy_session_start();
+
+if ($_SESSION['rol'] != 'admin') {
+    header("Location: ../../../Frontend/HTML/Paginas/index.php");
+}
+?>
 <nav id="topnav" class="topnav">
 
     <div class="bar">
