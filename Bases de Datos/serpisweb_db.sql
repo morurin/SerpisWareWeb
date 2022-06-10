@@ -26,7 +26,7 @@ PRIMARY KEY(idProducto)
 CREATE TABLE `productos` (
                              `idproducto` int NOT NULL AUTO_INCREMENT,
                              `nombreProducto` varchar(65) NOT NULL,
-                             `precioProducto` int NOT NULL,
+                             `precioProducto` float NOT NULL,
                              `tipoProducto` varchar(45) NOT NULL,
                              `especProducto` text NOT NULL,
                              `sobreProducto` text NOT NULL,
