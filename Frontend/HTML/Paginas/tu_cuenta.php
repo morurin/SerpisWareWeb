@@ -10,6 +10,21 @@
     <link rel="stylesheet" href="../../CSS/tu_cuenta.css" />
     <title>Tu cuenta</title>
 </head>
+
+<?php include ("../../../Bases de Datos/db_connect.php");
+        $email = $_GET['id'];
+        $id = mysqli_real_escape_string($pdo,$id);
+        $query = "SELECT * FROM usuario WHERE correo = '$email'";
+        $result = mysqli_query($pdo,$query);
+
+        while($row = mysqli_fetch_array($result)) {
+
+            $u_nombre = $row['username'];
+            $u_email = $row['correo'];
+            $u_tel= $row['telefono']; 
+             
+        }
+?>
 <body>
 
     <?php include ("../Paginas/topnav.php") ?>
@@ -28,7 +43,7 @@
 
                 <div id="default" class="tabcontent">
                     <div class="label">
-                        <h4>Hola, Pepito perez</h4>
+                        <h4>Hola, <?php echo $u_nombre?></h4>
                     </div>
                 </div>
 
@@ -38,7 +53,7 @@
                     <div class="label">
                         <div>
                             <label for="user"> Nombre de usuario</label><br>
-                            <h5>Pepito Perez</h5>
+                            <h5><?php echo $u_nombre?></h5>
 
                         </div>
                         
@@ -52,7 +67,7 @@
                         <div>
                             
                             <label for="email"> E-mail</label><br>
-                            <h5>uwu@gmaiil.com</h5>
+                            <h5><?php echo $u_email?></h5>
 
                         </div>
                         
@@ -67,7 +82,19 @@
                         <div>
                             
                             <label for="number"> Número de Teléfono</label><br>
-                            <h5>300000100</h5>
+
+                            <?php
+
+                            if($u_tel == null){
+                                echo "<h5>Añade un número de teléfono</h5>";
+
+                            }
+                            else{
+                               echo "<h5>$u_tel</h5>";
+                            }
+                            
+                            ?>
+                            
 
                         </div>
                         
