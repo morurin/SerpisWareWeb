@@ -13,7 +13,9 @@ if (isset($_POST['create'])) {
         header("Location: ../../loginRegistro.php");
     }else{
         $password = $_POST['password'];
-        $sql = "INSERT INTO usuario (correo, contrasena) VALUES ('$email', '$password')";
+        /*username is the email without the @gmail.com*/
+        $username = explode('@', $email);
+        $sql = "INSERT INTO usuario (correo, contrasena, username) VALUES ('$email', '$password', '$username[0]')";
         $result = mysqli_query($pdo, $sql);
         if($result){
             //echo "<script>alert('Producto eliminado correctamente');</script>";

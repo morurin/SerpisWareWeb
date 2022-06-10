@@ -82,7 +82,7 @@ session_start();
                     </div>
         
                     <div class="registroInput">
-                        <input placeholder="Contraseña" type="password" name="password" required autocomplete="off" />
+                        <input placeholder="Contraseña" type="password" name="password" required autocomplete="off" minlength="8"/>
                     </div>
             
     
