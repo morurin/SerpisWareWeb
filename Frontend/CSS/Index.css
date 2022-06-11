@@ -165,7 +165,10 @@
     .navbar-mainbg{
         margin-left: 5.8%;
        
-       
+    }
+
+    .stuff-container h2{
+        width: 190px !important;
     }
 }
 
