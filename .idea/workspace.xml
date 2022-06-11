@@ -5,14 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="58c51d25-c35f-4401-a2ff-71e04cea7ece" name="Changes" comment="merge con top y agrego base de datos">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f334ed41-7d59-4377-8c3f-380b3cf1e09f.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/f334ed41-7d59-4377-8c3f-380b3cf1e09f.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/HTML/Paginas/models/clients/Logout.php" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/HTML/Paginas/models/clients/Logout.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/HTML/Paginas/models/clients/create_user.php" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/HTML/Paginas/models/clients/create_user.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/HTML/Paginas/models/clients/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/HTML/Paginas/models/clients/login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/HTML/Paginas/models/products/borrar.php" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/HTML/Paginas/models/products/borrar.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/HTML/Paginas/nuevo.php" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/HTML/Paginas/nuevo.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/HTML/Paginas/topnav.php" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/HTML/Paginas/topnav.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/HTML/Paginas/update.php" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/HTML/Paginas/update.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,26 +42,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/xampp/htdocs",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/xampp/htdocs&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\SerpisWareWeb\Frontend\HTML\Paginas" />
@@ -97,7 +94,8 @@
       <workItem from="1654748799065" duration="3099000" />
       <workItem from="1654814119495" duration="1830000" />
       <workItem from="1654819481171" duration="613000" />
-      <workItem from="1654825534702" duration="16366000" />
+      <workItem from="1654825534702" duration="17740000" />
+      <workItem from="1654870629057" duration="1553000" />
     </task>
     <task id="LOCAL-00001" summary="Modificaciones nazhunas, separacion header-footer y conexion base datos productos">
       <created>1654405494931</created>

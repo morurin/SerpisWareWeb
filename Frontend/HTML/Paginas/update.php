@@ -186,6 +186,3 @@ if(isset($_POST['update'])){
     <br><br><br>
 <script src="../../JS/todasLasPaginas.js"></script>
 </body>
-
-
-
