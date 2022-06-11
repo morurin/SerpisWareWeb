@@ -12,6 +12,60 @@
     <link rel="stylesheet" href="../../CSS/pago.css" />
 </head>
 
+<?php include ("../../../Bases de Datos/db_connect.php");
+        
+        if (!isset($_SESSION)) {
+            session_start();
+        }
+        $email = $_SESSION['email'];
+
+        $query = "SELECT * FROM usuario WHERE correo = '$email'";
+        $result = mysqli_query($pdo,$query);
+
+        if(mysqli_num_rows($result) == 1){
+            $row = mysqli_fetch_array($result);
+            $id = $row['idUsuario'];
+            $u_nombre = $row['username'];
+            $u_email = $row['correo'];
+            $u_tel= $row['telefono']; 
+
+            $u_rnombre = $row['nombre'];
+            $u_direccion = $row['direccion'];
+            $u_provincia = $row['provincia'];
+            $u_municipio = $row['municipio'];
+            $u_postal = $row['postal'];
+
+        }
+
+
+        
+    if(isset($_POST['updateAdress'])){
+       
+       
+        $nombreReal = $_POST['nombreReal'];
+        $numero = $_POST['numero'];
+        $direccion = $_POST['direccion'];
+        $provincia = $_POST['provincia'];
+        $municipio = $_POST['municipio'];
+        $postal = $_POST['postal'];
+
+        $query = "UPDATE usuario SET nombre = '$nombreReal', telefono = '$numero', direccion = '$direccion',
+        provincia = '$provincia', municipio = '$municipio', postal = '$postal' WHERE correo = '$email'";
+
+        
+        
+        $result = mysqli_query($pdo, $query);
+    
+        if(!$result){
+            //echo "<script>alert('Error al actualizar el producto');</script>";
+            $_SESSION['mensaje'] = 'Error al actualizar ';
+        }
+
+        header("Location: pago.php");
+    
+    }
+?>
+
 <body>
     
 <?php include ("topnav.php");?>
@@ -23,12 +77,22 @@
             <div class="adress">
                 <h5>Dirección de entrega</h5>
                 <!--Esto de cambiar dependiendo de los datos almacenados -->
-                <div>
-                    <span class="name">Mario Lopez</span> /<span>305050006</span>
-                    <p>No sé que del moro piso 3</p>
-                    <span>Valencia,</span> <span>almassera,</span> <span>12345</span>
+                <?php
+                    if($u_rnombre != null){
+
+                        echo "<div>";
+                        echo   "<span class='name'>$u_rnombre</span> /<span>$u_tel</span>";
+                        echo   "<p>$u_direccion</p>";
+                        echo   "<span>$u_provincia,</span><span>$u_municipio,</span><span>$u_postal</span>";
+                        echo  "</div>";
+                        
+                    }
+                    else{
+                        echo "<p>Añade una dirección</p>";
+                    }
                     
-                </div>
+                        
+                ?>
 
                 <div class="change">
                     <h5 onclick="showModalA()">Cambiar</h5>
@@ -98,26 +162,26 @@
         
         <div class="modal-content">
         
-            <form class="saveForm" action="">
+            <form class="saveForm" method="POST">
                 
                 <h4>Información de contacto</h4>
 
                 <div class="grid">
                     
                     <div class="input">
-                        <input placeholder="Nombres y apellidos" type="text" required>
+                        <input placeholder="Nombres y apellidos" name="nombreReal" type="text" required>
                     </div>
                     
                     
                     <div class="input">
-                        <input placeholder="Número de teléfono" type="tel" maxlength="15">
+                        <input placeholder="Número de teléfono" name="numero" type="tel" maxlength="15">
                     </div>
 
                 </div>
                 
                 <h4>Dirección de entrega</h4>
                 <div class="input">
-                        <input class="all" placeholder="Dirección" type="text" required>
+                        <input class="all" placeholder="Dirección" name="direccion" type="text" required>
                 </div>
                 <div class="grid">
                     <div class="input">
@@ -181,12 +245,12 @@
                     <div>
                         <div class="grid">
                             <div class="input">
-                                <input placeholder="Municipio" type="text" required>
+                                <input placeholder="Municipio" name="municipio" type="text" required>
                             </div>
                     
 
                             <div class="input">
-                                <input class="postal" placeholder="Código postal" type="number" required>
+                                <input class="postal" placeholder="Código postal" name="postal" type="number" required>
                             </div>
                     
                         </div>
@@ -196,7 +260,7 @@
                     
                 </div>
 
-                <button>Guardar</button>
+                <button type="submit" name="updateAdress">Guardar</button>
 
             </form>
         </div>

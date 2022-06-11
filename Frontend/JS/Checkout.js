@@ -39,8 +39,7 @@ let arrayDeProductos = [
 ];
 sessionStorage.setItem("Carrito", JSON.stringify(arrayDeProductos));
 
-const onChangeInputHandler = (e) => {
-  e.preventDefault();
+const onChangeInputHandler = (e) => {e.preventDefault();
   const inputElement =
     e.target.parentElement.parentElement.querySelector("input");
   const nameElement =

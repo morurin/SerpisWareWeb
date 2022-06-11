@@ -50,7 +50,7 @@ CREATE TABLE Metodos_de_pago(
 
 
 CREATE TABLE Usuario(
-                        IdUsuario INT NOT null AUTO_INCREMENT,
+                        idUsuario INT NOT null AUTO_INCREMENT,
                         contrasena VARCHAR(20) NOT NULL,
                         username VARCHAR(20) NOT NULL,
                         nombre VARCHAR(60),
@@ -59,7 +59,7 @@ CREATE TABLE Usuario(
                         direccion VARCHAR (50),
                         provincia VARCHAR (20),
                         municipio VARCHAR (20),
-                        postal INT (5)
+                        postal INT (5),
                         Rol VARCHAR (20) DEFAULT ('User'),
                         id_metodopago INT,
                         PRIMARY KEY(idUsuario),

@@ -26,10 +26,11 @@ lazy_session_start();
         </a>
 
 
-        <?php if(isset($_SESSION['email'])) { ?>
-            <a href="tu_cuenta.php?id=<?php echo $_SESSION['email']?>" > <h4> <?php echo $_SESSION['username'] ?></h4>
+        <?php if(isset($_SESSION['email'])) { 
+            ?>
+            <a href="tu_cuenta.php"> <h4 class="display-name"> <?php echo $_SESSION['username'] ?></h4>
         <?php } else { ?>
-        <a href="./loginRegistro.php"> <h4>Iniciar sesión</h4>
+            <a href="./loginRegistro.php"> <h4>Iniciar sesión</h4>
         <?php } ?>
 
 

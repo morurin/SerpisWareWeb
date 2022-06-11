@@ -1,24 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="../../CSS/main.css" />
-    <link rel="stylesheet" href="../../CSS/tu_cuenta.css" />
-    <title>Tu cuenta</title>
-</head>
+
 
 <?php include ("../../../Bases de Datos/db_connect.php");
-        $email = $_GET['id'];
-        $id = mysqli_real_escape_string($pdo,$id);
+        
+        if (!isset($_SESSION)) {
+            session_start();
+        }
+        $email = $_SESSION['email'];
+
         $query = "SELECT * FROM usuario WHERE correo = '$email'";
         $result = mysqli_query($pdo,$query);
 
-        while($row = mysqli_fetch_array($result)) {
+        if(mysqli_num_rows($result) == 1){
+            $row = mysqli_fetch_array($result);
+            $id = $row['idUsuario'];
+            $u_nombre = $row['username'];
+            $u_email = $row['correo'];
+            $u_tel= $row['telefono']; 
 
+            $u_rnombre = $row['nombre'];
+            $u_direccion = $row['direccion'];
+            $u_provincia = $row['provincia'];
+            $u_municipio = $row['municipio'];
+            $u_postal = $row['postal'];
+
+        }
+
+        /*while($row = mysqli_fetch_array($result)) {
+
+            $id = $row['idUsuario'];
             $u_nombre = $row['username'];
             $u_email = $row['correo'];
             $u_tel= $row['telefono']; 
@@ -30,8 +41,79 @@
             $u_postal = $row['postal'];
 
              
+        }*/
+        
+
+    if(isset($_POST['updateName']) || isset($_POST['updateNumber']) || isset($_POST['updateEmail']) 
+    || isset($_POST['updatePassword']) || isset($_POST['updateAdress'])){
+       
+       
+
+        if(isset($_POST['updateName'])){
+
+            $nombre = $_POST['nombreUsuario'];
+            $query = "UPDATE usuario SET username = '$nombre' WHERE correo = '$email'";
+            $_SESSION['username'] = $nombre;
+
         }
+        elseif(isset($_POST['updateEmail'])){
+
+            $email = $_POST['email'];
+            $query = "UPDATE usuario SET correo = '$email' WHERE idUsuario = '$id'";
+            $_SESSION['email'] = $email;
+        }
+        elseif(isset($_POST['updateNumber'])){
+
+            $numero = $_POST['numero'];
+            $query = "UPDATE usuario SET telefono = '$numero' WHERE idUsuario = '$id'";
+        }
+        elseif(isset($_POST['updatePassword'])){
+            $contrasena = $_POST['contrasena'];
+            $query = "UPDATE usuario SET contrasena = '$contrasena' WHERE idUsuario = '$id'";
+
+        }
+
+        elseif(isset($_POST['updateAdress'])){
+
+            $nombreReal = $_POST['nombreReal'];
+            $numero = $_POST['numero'];
+            $direccion = $_POST['direccion'];
+            $provincia = $_POST['provincia'];
+            $municipio = $_POST['municipio'];
+            $postal = $_POST['postal'];
+
+            $query = "UPDATE usuario SET nombre = '$nombreReal', telefono = '$numero', direccion = '$direccion',
+            provincia = '$provincia', municipio = '$municipio', postal = '$postal' WHERE correo = '$email'";
+
+        }
+        
+        
+
+    
+        $result = mysqli_query($pdo, $query);
+    
+        if(!$result){
+            //echo "<script>alert('Error al actualizar el producto');</script>";
+            $_SESSION['mensaje'] = 'Error al actualizar ';
+        }
+
+        header("Location: tu_cuenta.php");
+    
+    }
 ?>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../CSS/main.css" />
+    <link rel="stylesheet" href="../../CSS/tu_cuenta.css" />
+    <title>Mi cuenta</title>
+</head>
+
+
 <body>
 
     <?php include ("../Paginas/topnav.php") ?>
@@ -39,7 +121,7 @@
     <main>
         <br><br><br>
         <div class="main-container">
-            <h3>Tu cuenta</h3>
+            <h3>Mi cuenta</h3>
             <div class="grid">
                 <div class="tab">
                     
@@ -115,7 +197,7 @@
                         <div>
                             
                             <label for="password"> Contraseña</label><br>
-                            <h5>**********</h5>
+                            <h5>********</h5>
 
                         </div>
                         
@@ -200,12 +282,12 @@
 
     <div id="nameM" class="name-modal">
         <div class="modal-content-2">
-            <form class="saveForm">
+            <form class="saveForm" method="POST" action="">
                 <div class="input-modal">
-                    <input placeholder="Nombre de usuario" type="text" required>
+                    <input placeholder="Nombre de usuario" type="text" name="nombreUsuario" maxlength="20" value="<?php echo $nombre ?>" required >
                 </div>
 
-                <button>Editar</button>
+                <button type="submit" name="updateName">Editar</button>
 
             </form>
 
@@ -215,12 +297,12 @@
 
     <div id="emailM" class="email-modal">
         <div class="modal-content-2">
-            <form class="saveForm">
+            <form class="saveForm" method="POST">
                 <div class="input-modal">
-                    <input placeholder="Email" type="text" required>
+                    <input placeholder="Email" type="text" name="email" required>
                 </div>
 
-                <button>Editar</button>
+                <button name="updateEmail">Editar</button>
 
             </form>
 
@@ -229,12 +311,12 @@
 
     <div id="numberM" class="number-modal">
         <div class="modal-content-2">
-            <form class="saveForm">
+            <form class="saveForm" method="POST">
                 <div class="input-modal">
-                    <input placeholder="Número de teléfono" type="number" required>
+                    <input placeholder="Número de teléfono" type="number" name="numero" required>
                 </div>
 
-                <button>Editar</button>
+                <button name="updateNumber">Editar</button>
 
             </form>
 
@@ -244,13 +326,13 @@
 
     <div id="passwordM" class="password-modal">
         <div class="modal-content-2P">
-            <form class="saveForm">
+            <form class="saveForm" method="POST">
                 <div class="input-modal">
                     <input placeholder="Contraeña actual" type="password" required>
-                    <input placeholder="Nueva contraseña" type="password">
+                    <input placeholder="Nueva contraseña" type="password" name="password" required>
                 </div>
 
-                <button>Editar</button>
+                <button name="updatePassword">Editar</button>
 
             </form>
 
@@ -265,26 +347,26 @@
         
         <div class="modal-content">
         
-            <form class="saveForm" action="">
+            <form class="saveForm" method="POST">
                 
                 <h4>Información de contacto</h4>
 
                 <div class="grid-modal">
                     
                     <div class="input-modal">
-                        <input placeholder="Nombres y apellidos" type="text" required>
+                        <input placeholder="Nombres y apellidos" name="nombreReal" type="text" required>
                     </div>
                     
                     
                     <div class="input-modal">
-                        <input placeholder="Número de teléfono" type="number" required>
+                        <input placeholder="Número de teléfono" name="numero" type="number" required>
                     </div>
 
                 </div>
                 
                 <h4>Dirección de entrega</h4>
                 <div class="input-modal">
-                        <input class="all" placeholder="Dirección" type="text" required>
+                        <input class="all" placeholder="Dirección" name="direccion" type="text" required>
                 </div>
                 <div class="grid-modal">
                     <div class="input-modal">
@@ -348,12 +430,12 @@
                     <div>
                         <div class="grid-modal">
                             <div class="input-modal">
-                                <input placeholder="Municipio" type="text" required>
+                                <input placeholder="Municipio" name="municipio" type="text" required>
                             </div>
                     
 
                             <div class="input-modal">
-                                <input class="postal" placeholder="Código postal" type="number" required>
+                                <input class="postal" placeholder="Código postal" name="postal" type="number" required>
                             </div>
                     
                         </div>
@@ -363,10 +445,11 @@
                     
                 </div>
 
-                <button>Guardar</button>
+                <button type="submit" name="updateAdress">Guardar</button>
 
             </form>
         </div>
+    </div>
     
     </main>
 

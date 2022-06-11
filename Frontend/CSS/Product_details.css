@@ -149,10 +149,10 @@
     grid-template-columns: 60% 40%;
     background-color: rgb(243, 239, 239);
     margin: auto;
-    padding: 20px;
+    padding: 15px;
     border: 1px solid #888;
     width: 80%;
-    height: 420px;
+    height: 78%;
     -webkit-animation-name: slideIn;
     -webkit-animation-duration: 0.4s;
     animation-name: slideIn;
@@ -199,7 +199,8 @@
 }
 
 .modal-ProductN {
-    font-size: 20px;
+    font-size: 15px;
+    font-weight: 600;
 }
 
 .modal-button {
@@ -230,7 +231,7 @@
 .left-stuff {
 
     margin-left: 45px;
-    margin-bottom: 25px;
+    overflow: hidden;
 
 }
 

@@ -53,6 +53,7 @@ if(isset($_POST['update'])){
     $_SESSION['mensaje'] = ' "'.$id.'" Editado exitosamente';
     $_SESSION['color_mensaje'] = 'success';
     header("Location: gestionar_productos.php");
+    
 
 }
 ?>
@@ -181,7 +182,7 @@ if(isset($_POST['update'])){
 
 
 </div>
-<?php include './footer.php' ?>
+<!--No es necesario el footer en paginas de administración -->
     <br><br><br>
 <script src="../../JS/todasLasPaginas.js"></script>
 </body>
