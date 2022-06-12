@@ -284,7 +284,7 @@
         <div class="modal-content-2">
             <form class="saveForm" method="POST" action="">
                 <div class="input-modal">
-                    <input placeholder="Nombre de usuario" type="text" name="nombreUsuario" maxlength="20" value="<?php echo $nombre ?>" required >
+                    <input placeholder="Nombre de usuario" type="text" name="nombreUsuario" maxlength="20" value="<?php echo $u_nombre ?>" required >
                 </div>
 
                 <button type="submit" name="updateName">Editar</button>
@@ -294,12 +294,13 @@
         </div>
     </div>
 
+    
 
     <div id="emailM" class="email-modal">
         <div class="modal-content-2">
             <form class="saveForm" method="POST">
                 <div class="input-modal">
-                    <input placeholder="Email" type="text" name="email" required>
+                    <input placeholder="Email" type="text" name="email" value="<?php echo $u_email ?>" required>
                 </div>
 
                 <button name="updateEmail">Editar</button>
@@ -308,6 +309,8 @@
 
         </div>
     </div>
+
+
 
     <div id="numberM" class="number-modal">
         <div class="modal-content-2">
