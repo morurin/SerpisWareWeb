@@ -138,11 +138,11 @@
             <div class="resume">
                 <h2>Resumen</h2>
                 <br>
-                <h5>Costo total de los productos <span>22</span>€</h5>
+                <h5>Costo total de los productos <span>100.5</span>€</h5>
                 <br>
                 <h5>Total de envío  <span>5</span>€</h5>
                 <br>
-                <h5>Total <span>27</span>€</h5>
+                <h5>Total <span>105.5</span>€</h5>
 
                 <div>
                     <button>Pagar ahora</button>

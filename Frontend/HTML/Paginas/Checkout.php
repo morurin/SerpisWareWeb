@@ -90,7 +90,7 @@
                                 <div class="DescripcionCheckout">
                                     <br>
                                     <p></p>
-                                    <p>Precio del envio: 10.5€</p>
+                                    <p>Precio del envio: 5€</p>
                                     <p></p>
                                     <br>
                                 </div>

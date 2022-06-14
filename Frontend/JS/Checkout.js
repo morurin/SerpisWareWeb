@@ -92,7 +92,7 @@ const renderPrices = () => {
 
   pPreciosProductos.textContent = "Precio de los productos: " + parseFloat(precioProductos).toFixed(2) + "€";
   pPrecioTotal.textContent =
-    "Precio Total: " + parseFloat(precioProductos + 10.5).toFixed(2) +"€";
+    "Precio Total: " + parseFloat(precioProductos + 5).toFixed(2) +"€";
   if (precioProductos === 0) {
     divPreciosProductos.innerHTML = "<p>Agregue productos a su carrito</p>";
     divPreciosProductos.parentElement.querySelector("button").disabled = true;

@@ -108,7 +108,7 @@ if(isset($_POST['update'])){
                 <div class="col-md-12">
                     <div class="card">
                         <div class="card-header">
-                            <h4 class="card-title">Editar Producto</h4>
+                            <h4 class="card-title">Añadir Producto</h4>
                         </div>
                         <div class="card-body">
                             <form enctype="multipart/form-data" action="" method="POST">
