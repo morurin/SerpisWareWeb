@@ -70,7 +70,7 @@
                 <?php
                     if(isset($_SESSION['email'])){
 
-                    echo    '<form action="./pago.php">';
+                    echo    '<form class="form-buttons" action="./pago.php">';
                     echo    '<button class="buy-button" type="submit">Comprar';
                     echo    '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bag"';
                     echo    'viewBox="0 0 16 16">';
@@ -87,7 +87,7 @@
                     else{
 
                         
-                    echo    '<form action="./loginRegistro.php">';
+                    echo    '<form class="form-buttons" action="./loginRegistro.php">';
                     echo    '<button class="buy-button" type="submit">Comprar';
                     echo    '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bag"';
                     echo    'viewBox="0 0 16 16">';
@@ -96,7 +96,7 @@
                     echo    '</form>';
 
 
-                    echo     '<form action="./loginRegistro.php">';
+                    echo     '<form class="form-buttons" action="./loginRegistro.php">';
                     echo    '<button id="add" class="add-button" type="submit">Añadir al carrito ';
                     echo    '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"';
                     echo    'class="bi bi-cart3" viewBox="0 0 16 16">';
