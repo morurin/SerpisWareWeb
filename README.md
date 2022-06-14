@@ -1,10 +1,5 @@
 ## SerpisWeb E-commerce
 
-Pagina web del perchas
-
->De moruriño y nazhito
->Para
->  perseiño
 
 
 ## instalacion
@@ -16,12 +11,4 @@ Pagina web del perchas
 ```sh
 localhost/serpiswareweb/Frontend/HTML/Paginas/
 ```
-
-Listo. Ya ta montao uwu.
-
-## Licencia
-
-**Software gratis yeiiiii :3!**
-
-
 
